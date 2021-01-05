@@ -1,2 +1,1 @@
-# smartlook-demo-ios
-Demo App for Smartlook iOS SDK
+# Demo App for Smartlook iOS SDK
