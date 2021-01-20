@@ -1,0 +1,103 @@
+/* 
+  Localizable.strings
+  Smartlook Demo App
+
+  Created by Václav Halík on 08.12.2020.
+  Copyright © 2020 Smartlook. All rights reserved.
+*/
+
+/* Rendering modes */
+"rendering-method-native" = "Native";
+"rendering-method-wireframe" = "Wireframe";
+"no-rendering" = "No rendering";
+
+/* Rendering mode options */
+"rendering-method-option-none" = "None";
+"rendering-method-option-color-wireframe" = "Color";
+"rendering-method-option-blueprint-wireframe" = "Blueprint";
+"rendering-method-option-icon-blueprint-wireframe" = "Blueprint with icons";
+
+/* Event tracking modes */
+"event-tracking-mode-full" = "Full";
+"event-tracking-mode-ignore-user-interaction" = "Ignore user interaction";
+"event-tracking-mode-ignore-navigation-interaction-events" = "Ignore navigation interaction";
+"event-tracking-mode-ignore-rage-click-events" = "Ignore rage click";
+"event-tracking-mode-no-tracking" = "No tracking";
+
+/* Values strings */
+"ignored" = "ignored";
+"none" = "None";
+"name" = "Name";
+"value" = "Value";
+"framerate" = "Framerate";
+"fps" = "fps";
+
+/* Property placeholders */
+"property-name-placeholder" = "sample-name";
+"property-value-placeholder" = "sample-value";
+
+/* Selection screen titles */
+"settings-deny-list" = "Deny list";
+"settings-event-tracking" = "Event tracking";
+"rendering-mode" = "Rendering mode";
+"rendering-option" = "Rendering option";
+
+/* Properties screen titles */
+"session-properties" = "Session properties";
+"global-properties" = "Global properties";
+"new-property" = "New property";
+"edit-property" = "Edit property";
+
+/* Properties screen */
+"no-properties-defined" = "No properties are defined.";
+"your-properties-add-here" = "Your properties can be entered here.";
+
+/* Alert text & messages */
+"alert-session-reset" = "Session was closed";
+"alert-session-reset-message" = "The current session has been closed and replaced with a new one.";
+
+/* Buttons */
+"button-ok" = "OK";
+
+/* Main screen */
+"sdk-recording" = "SDK recording";
+"sdk-suspended" = "SDK suspended";
+
+/* Demo detail screen */
+"demo-notes" = "Demo notes";
+"developer-notes" = "Developer notes";
+"options" = "Options";
+"show-demo" = "Show demo";
+
+/* Demo items */
+// Towns (UIKit)
+"towns-demo-name" = "Towns List";
+"towns-demo-perex" = "Simple application flow with SplitView for finding information about Czech cities.";
+"towns-demo-notes" = "Shows sample flow with the ability to search for items in a list, filter them and display their detail in WebView. The demo also shows the use of map data and interaction with the map.";
+"towns-demo-developer-notes" = "The demo uses standard system components such as UITableView, UITextField, UILabel or UIImageView. Navigation is implemented using the system components UISplitView and UINavigationController. It also uses WKWebView to display content and MKMapKit to display maps.";
+
+// Towns (SwiftUI)
+"towns-swiftui-demo-name" = "Towns List";
+"towns-swiftui-demo-perex" = "Simple application flow with DoubleColumn navigation for finding information about Czech cities.";
+"towns-swiftui-demo-notes" = "Towns List demo notes.";
+"towns-swiftui-demo-developer-notes" = "Towns List developer notes";
+
+// Towns options
+"map-sensitivity-option-name" = "Mark map as sensitive";
+"track-town-selection-option-name" = "Track town selection";
+
+/* Consent SDK */
+// Title and into text
+"smartlook-consent-sdk-title" = "Consents for $APP"; //$APP is replaced by the app display name and the name is highlighted then.
+"smartlook-consent-sdk-text" = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante.\n\nCurabitur vitae diam non enim vestibulum interdum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.";
+
+// Texts for privacy consent
+"smartlook-consent-sdk-privacy-consent" = "Privacy consent proin mattis lacinia justo. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede.";
+"smartlook-consent-sdk-privacy-consent-url" = "https://www.smartlook.com";
+
+// Texts for analytics consent
+"smartlook-consent-sdk-analytics-consent" = "Analytics consent aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Morbi scelerisque luctus velit. Nunc auctor. ";
+//"consent-sdk-analytics-consent-url" = "https://www.smartlook.com";
+
+// The button
+"smartlook-consent-sdk-button" = "Confirm & continue";

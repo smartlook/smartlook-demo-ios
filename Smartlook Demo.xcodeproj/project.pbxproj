@@ -1,0 +1,813 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F2076B725876509009D64BA /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2076B625876509009D64BA /* UIView+CornerRadius.swift */; };
+		8F2076BB258771B4009D64BA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2076BA258771B4009D64BA /* MainViewController.swift */; };
+		8F2076BF2587A299009D64BA /* FlowDemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2076BE2587A299009D64BA /* FlowDemoCell.swift */; };
+		8F22758A258B546D00622794 /* FlowDemoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F227589258B546D00622794 /* FlowDemoHeaderView.swift */; };
+		8F2A2C3C25B5E9BA008A6D91 /* DemoConfigurability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A2C3B25B5E9BA008A6D91 /* DemoConfigurability.swift */; };
+		8F2A2C3F25B5EC2A008A6D91 /* TownsHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A2C3E25B5EC2A008A6D91 /* TownsHostingController.swift */; };
+		8F2F18B125593CF800CC128C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F18B025593CF800CC128C /* AppDelegate.swift */; };
+		8F2F18B325593CF800CC128C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F18B225593CF800CC128C /* SceneDelegate.swift */; };
+		8F2F18B525593CF800CC128C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F18B425593CF800CC128C /* ListViewController.swift */; };
+		8F2F18B825593CF800CC128C /* Towns.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2F18B625593CF800CC128C /* Towns.storyboard */; };
+		8F2F18BA25593CF900CC128C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F2F18B925593CF900CC128C /* Assets.xcassets */; };
+		8F2F18BD25593CF900CC128C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2F18BB25593CF900CC128C /* LaunchScreen.storyboard */; };
+		8F2F18CE2559425D00CC128C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F18CD2559425D00CC128C /* DetailViewController.swift */; };
+		8F2F18D22559435E00CC128C /* Town.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F18D12559435E00CC128C /* Town.swift */; };
+		8F2F18D6255944CD00CC128C /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F18D5255944CD00CC128C /* MapController.swift */; };
+		8F2F18D92559455C00CC128C /* TownPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F18D82559455C00CC128C /* TownPin.swift */; };
+		8F2F18E22559550900CC128C /* TownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F18E12559550900CC128C /* TownCell.swift */; };
+		8F2F18E52559592800CC128C /* TownsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F18E42559592800CC128C /* TownsData.swift */; };
+		8F3D59A825A4C39600DFEAD9 /* DemoPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3D59A725A4C39600DFEAD9 /* DemoPresenting.swift */; };
+		8F4AEFB9259C68E50064A37A /* TownsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4AEFB8259C68E50064A37A /* TownsView.swift */; };
+		8F4AEFBC259C6AEA0064A37A /* TownsSwiftUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F4AEFBB259C6AEA0064A37A /* TownsSwiftUI.storyboard */; };
+		8F4AEFC0259C6FBD0064A37A /* TownsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4AEFBF259C6FBD0064A37A /* TownsListView.swift */; };
+		8F535D382588B17300B76FC1 /* DemosData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F535D372588B17300B76FC1 /* DemosData.swift */; };
+		8F55CA8C257E376E00EBDA3E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F55CA8B257E376E00EBDA3E /* Settings.storyboard */; };
+		8F6A43A025B5D6FC00E50034 /* SmartlookConsentSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 8F6A439F25B5D6FC00E50034 /* SmartlookConsentSDK */; };
+		8F6A43A525B5E26E00E50034 /* TownsDemoOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A43A425B5E26E00E50034 /* TownsDemoOptions.swift */; };
+		8F6C7BE2258CF4E60024795E /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6C7BE1258CF4E60024795E /* SwitchCell.swift */; };
+		8F6C7BE5258CF5060024795E /* StepperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6C7BE4258CF5060024795E /* StepperCell.swift */; };
+		8F76A59925A31B1100EE723C /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76A59825A31B1100EE723C /* WebView.swift */; };
+		8F76A59C25A31D4E00EE723C /* TownsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76A59B25A31D4E00EE723C /* TownsDetailView.swift */; };
+		8F76A59F25A3242300EE723C /* TownsMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76A59E25A3242300EE723C /* TownsMapView.swift */; };
+		8F77025F258B750900C3783D /* PropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F77025E258B750900C3783D /* PropertiesViewController.swift */; };
+		8F770262258B97D600C3783D /* PropertiesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F770261258B97D600C3783D /* PropertiesHeaderView.swift */; };
+		8F770265258BB45800C3783D /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F770264258BB45800C3783D /* Property.swift */; };
+		8F8EFA71259C752200BA674F /* TownsListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8EFA70259C752200BA674F /* TownsListRowView.swift */; };
+		8F8EFA75259C825200BA674F /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8EFA74259C825200BA674F /* SearchBarView.swift */; };
+		8FA7BB03257F698A002170D6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7BB02257F698A002170D6 /* SettingsViewController.swift */; };
+		8FA7BB07257F7570002170D6 /* RenderingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7BB06257F7570002170D6 /* RenderingViewController.swift */; };
+		8FA7BB0A257F777B002170D6 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7BB09257F777B002170D6 /* SelectionViewController.swift */; };
+		8FA7BB0E257F8366002170D6 /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7BB0D257F8366002170D6 /* Selection.swift */; };
+		8FA7BB1C257F9055002170D6 /* SettingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7BB1B257F9055002170D6 /* SettingsData.swift */; };
+		8FA7BB28257F9A47002170D6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FA7BB26257F9A47002170D6 /* Localizable.strings */; };
+		8FB02792257E8B860049923F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FB02791257E8B860049923F /* Main.storyboard */; };
+		8FB389C5258CA1BC00718E75 /* PropertyEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB389C4258CA1BC00718E75 /* PropertyEditViewController.swift */; };
+		8FB389C8258CA7F400718E75 /* ValueEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB389C7258CA7F400718E75 /* ValueEditViewController.swift */; };
+		8FC1C0FD25A4671F00BF05DD /* DemoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC1C0FC25A4671F00BF05DD /* DemoDetailViewController.swift */; };
+		8FD1E73B25ADB5DA003A6156 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1E73A25ADB5DA003A6156 /* AppSettings.swift */; };
+		8FD1E74225ADCEAF003A6156 /* AppSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD1E74125ADCEAF003A6156 /* AppSettingsManager.swift */; };
+		8FD8534F25B04F6F00D3C4BC /* SwiftUI+Smartlook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD8534E25B04F6F00D3C4BC /* SwiftUI+Smartlook.swift */; };
+		8FD8535725B0961300D3C4BC /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD8535625B0961300D3C4BC /* SplitViewController.swift */; };
+		8FD96C6625A761BD00445FD0 /* UITableView+EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD96C6525A761BD00445FD0 /* UITableView+EmptyView.swift */; };
+		8FD96C6A25A76C2200445FD0 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD96C6925A76C2200445FD0 /* ButtonCell.swift */; };
+		8FDA850625B858D90002ABCE /* TODO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDA850525B858D90002ABCE /* TODO.swift */; };
+		8FDA850925B85B630002ABCE /* Smartlook in Frameworks */ = {isa = PBXBuildFile; productRef = 8FDA850825B85B630002ABCE /* Smartlook */; };
+		8FFDF6632599DD7C001F70EA /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFDF6622599DD7C001F70EA /* String+Localized.swift */; };
+		8FFDF668259A1357001F70EA /* PropertyEditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFDF667259A1357001F70EA /* PropertyEditCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8F2076B625876509009D64BA /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
+		8F2076BA258771B4009D64BA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8F2076BE2587A299009D64BA /* FlowDemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowDemoCell.swift; sourceTree = "<group>"; };
+		8F227589258B546D00622794 /* FlowDemoHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowDemoHeaderView.swift; sourceTree = "<group>"; };
+		8F2A2C3B25B5E9BA008A6D91 /* DemoConfigurability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoConfigurability.swift; sourceTree = "<group>"; };
+		8F2A2C3E25B5EC2A008A6D91 /* TownsHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownsHostingController.swift; sourceTree = "<group>"; };
+		8F2F18AD25593CF800CC128C /* Smartlook Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smartlook Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F2F18B025593CF800CC128C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8F2F18B225593CF800CC128C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8F2F18B425593CF800CC128C /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		8F2F18B725593CF800CC128C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Towns.storyboard; sourceTree = "<group>"; };
+		8F2F18B925593CF900CC128C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8F2F18BC25593CF900CC128C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8F2F18BE25593CF900CC128C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F2F18CD2559425D00CC128C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8F2F18D12559435E00CC128C /* Town.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Town.swift; sourceTree = "<group>"; };
+		8F2F18D5255944CD00CC128C /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		8F2F18D82559455C00CC128C /* TownPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownPin.swift; sourceTree = "<group>"; };
+		8F2F18E12559550900CC128C /* TownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownCell.swift; sourceTree = "<group>"; };
+		8F2F18E42559592800CC128C /* TownsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownsData.swift; sourceTree = "<group>"; };
+		8F3D59A725A4C39600DFEAD9 /* DemoPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoPresenting.swift; sourceTree = "<group>"; };
+		8F4AEFB8259C68E50064A37A /* TownsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownsView.swift; sourceTree = "<group>"; };
+		8F4AEFBB259C6AEA0064A37A /* TownsSwiftUI.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TownsSwiftUI.storyboard; sourceTree = "<group>"; };
+		8F4AEFBF259C6FBD0064A37A /* TownsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownsListView.swift; sourceTree = "<group>"; };
+		8F535D372588B17300B76FC1 /* DemosData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemosData.swift; sourceTree = "<group>"; };
+		8F55CA8B257E376E00EBDA3E /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		8F6A43A425B5E26E00E50034 /* TownsDemoOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownsDemoOptions.swift; sourceTree = "<group>"; };
+		8F6C7BE1258CF4E60024795E /* SwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
+		8F6C7BE4258CF5060024795E /* StepperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperCell.swift; sourceTree = "<group>"; };
+		8F76A59825A31B1100EE723C /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		8F76A59B25A31D4E00EE723C /* TownsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownsDetailView.swift; sourceTree = "<group>"; };
+		8F76A59E25A3242300EE723C /* TownsMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownsMapView.swift; sourceTree = "<group>"; };
+		8F77025E258B750900C3783D /* PropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesViewController.swift; sourceTree = "<group>"; };
+		8F770261258B97D600C3783D /* PropertiesHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesHeaderView.swift; sourceTree = "<group>"; };
+		8F770264258BB45800C3783D /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		8F8EFA70259C752200BA674F /* TownsListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownsListRowView.swift; sourceTree = "<group>"; };
+		8F8EFA74259C825200BA674F /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		8FA7BB02257F698A002170D6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8FA7BB06257F7570002170D6 /* RenderingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderingViewController.swift; sourceTree = "<group>"; };
+		8FA7BB09257F777B002170D6 /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
+		8FA7BB0D257F8366002170D6 /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
+		8FA7BB1B257F9055002170D6 /* SettingsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsData.swift; sourceTree = "<group>"; };
+		8FA7BB27257F9A47002170D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8FB02791257E8B860049923F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8FB389C4258CA1BC00718E75 /* PropertyEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyEditViewController.swift; sourceTree = "<group>"; };
+		8FB389C7258CA7F400718E75 /* ValueEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueEditViewController.swift; sourceTree = "<group>"; };
+		8FC1C0FC25A4671F00BF05DD /* DemoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoDetailViewController.swift; sourceTree = "<group>"; };
+		8FD1E73A25ADB5DA003A6156 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		8FD1E74125ADCEAF003A6156 /* AppSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsManager.swift; sourceTree = "<group>"; };
+		8FD8534E25B04F6F00D3C4BC /* SwiftUI+Smartlook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Smartlook.swift"; sourceTree = "<group>"; };
+		8FD8535625B0961300D3C4BC /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
+		8FD96C6525A761BD00445FD0 /* UITableView+EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+EmptyView.swift"; sourceTree = "<group>"; };
+		8FD96C6925A76C2200445FD0 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
+		8FDA84E125B822110002ABCE /* Smartlook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Smartlook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FDA850525B858D90002ABCE /* TODO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODO.swift; sourceTree = "<group>"; };
+		8FFDF6622599DD7C001F70EA /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		8FFDF667259A1357001F70EA /* PropertyEditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyEditCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F2F18AA25593CF800CC128C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F6A43A025B5D6FC00E50034 /* SmartlookConsentSDK in Frameworks */,
+				8FDA850925B85B630002ABCE /* Smartlook in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F2076B5258764E3009D64BA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8FFDF6622599DD7C001F70EA /* String+Localized.swift */,
+				8F2076B625876509009D64BA /* UIView+CornerRadius.swift */,
+				8FD96C6525A761BD00445FD0 /* UITableView+EmptyView.swift */,
+				8FD8534E25B04F6F00D3C4BC /* SwiftUI+Smartlook.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8F2076BD2587A282009D64BA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8FD96C6925A76C2200445FD0 /* ButtonCell.swift */,
+				8F2076BE2587A299009D64BA /* FlowDemoCell.swift */,
+				8F227589258B546D00622794 /* FlowDemoHeaderView.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8F2A2C3D25B5EC04008A6D91 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8F2A2C3E25B5EC2A008A6D91 /* TownsHostingController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8F2F18A425593CF800CC128C = {
+			isa = PBXGroup;
+			children = (
+				8F2F18AF25593CF800CC128C /* Smartlook Demo */,
+				8F2F18AE25593CF800CC128C /* Products */,
+				8FDA84E025B822110002ABCE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8F2F18AE25593CF800CC128C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F2F18AD25593CF800CC128C /* Smartlook Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F2F18AF25593CF800CC128C /* Smartlook Demo */ = {
+			isa = PBXGroup;
+			children = (
+				8F2F18C725593E3900CC128C /* Application */,
+				8F2F18D02559432A00CC128C /* Model */,
+				8F2076B5258764E3009D64BA /* Extensions */,
+				8F2F18C825593E4E00CC128C /* Resources */,
+				8F2F18C925593E9C00CC128C /* Storyboards */,
+				8F2F18CA25593EC700CC128C /* UI */,
+				8F3D59AC25A4C66100DFEAD9 /* Demos */,
+			);
+			path = "Smartlook Demo";
+			sourceTree = "<group>";
+		};
+		8F2F18C725593E3900CC128C /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				8F2F18B025593CF800CC128C /* AppDelegate.swift */,
+				8F2F18B225593CF800CC128C /* SceneDelegate.swift */,
+				8F2F18BE25593CF900CC128C /* Info.plist */,
+				8FDA850525B858D90002ABCE /* TODO.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		8F2F18C825593E4E00CC128C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8F2F18B925593CF900CC128C /* Assets.xcassets */,
+				8FA7BB26257F9A47002170D6 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8F2F18C925593E9C00CC128C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8F2F18BB25593CF900CC128C /* LaunchScreen.storyboard */,
+				8FB02791257E8B860049923F /* Main.storyboard */,
+				8F55CA8B257E376E00EBDA3E /* Settings.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8F2F18CA25593EC700CC128C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8FA7BB01257F691B002170D6 /* MainFlow */,
+				8F55CA8A257E2F8400EBDA3E /* SettingsFlow */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8F2F18D02559432A00CC128C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8FA7BB0D257F8366002170D6 /* Selection.swift */,
+				8F770264258BB45800C3783D /* Property.swift */,
+				8FD1E73A25ADB5DA003A6156 /* AppSettings.swift */,
+				8FD1E74125ADCEAF003A6156 /* AppSettingsManager.swift */,
+				8FA7BB1B257F9055002170D6 /* SettingsData.swift */,
+				8F535D372588B17300B76FC1 /* DemosData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8F2F18DB2559457100CC128C /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				8F2F18D82559455C00CC128C /* TownPin.swift */,
+			);
+			path = Annotations;
+			sourceTree = "<group>";
+		};
+		8F2F18DD2559463400CC128C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8F2F18E12559550900CC128C /* TownCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8F3D59AC25A4C66100DFEAD9 /* Demos */ = {
+			isa = PBXGroup;
+			children = (
+				8F3D59AF25A4C74C00DFEAD9 /* Shared */,
+				8F3D59AD25A4C69400DFEAD9 /* Towns */,
+				8F55CA87257E2ED900EBDA3E /* TownsSwiftUI */,
+			);
+			path = Demos;
+			sourceTree = "<group>";
+		};
+		8F3D59AD25A4C69400DFEAD9 /* Towns */ = {
+			isa = PBXGroup;
+			children = (
+				8F3D59B225A4C7B600DFEAD9 /* Storyboards */,
+				8F3D59B125A4C7A000DFEAD9 /* UI */,
+			);
+			path = Towns;
+			sourceTree = "<group>";
+		};
+		8F3D59AF25A4C74C00DFEAD9 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				8F3D59B025A4C75A00DFEAD9 /* Model */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		8F3D59B025A4C75A00DFEAD9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8F2F18D12559435E00CC128C /* Town.swift */,
+				8F2F18E42559592800CC128C /* TownsData.swift */,
+				8F6A43A425B5E26E00E50034 /* TownsDemoOptions.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8F3D59B125A4C7A000DFEAD9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8F2F18DD2559463400CC128C /* Cells */,
+				8F2F18DB2559457100CC128C /* Annotations */,
+				8F2F18B425593CF800CC128C /* ListViewController.swift */,
+				8F2F18CD2559425D00CC128C /* DetailViewController.swift */,
+				8F2F18D5255944CD00CC128C /* MapController.swift */,
+				8FD8535625B0961300D3C4BC /* SplitViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8F3D59B225A4C7B600DFEAD9 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8F2F18B625593CF800CC128C /* Towns.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8F3D59B425A4C7EC00DFEAD9 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8F4AEFBB259C6AEA0064A37A /* TownsSwiftUI.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8F3D59B525A4C80600DFEAD9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8F2A2C3D25B5EC04008A6D91 /* Controllers */,
+				8F8EFA6F259C74E300BA674F /* Views */,
+				8F4AEFB8259C68E50064A37A /* TownsView.swift */,
+				8F4AEFBF259C6FBD0064A37A /* TownsListView.swift */,
+				8F76A59B25A31D4E00EE723C /* TownsDetailView.swift */,
+				8F76A59E25A3242300EE723C /* TownsMapView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8F55CA87257E2ED900EBDA3E /* TownsSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				8F3D59B425A4C7EC00DFEAD9 /* Storyboards */,
+				8F3D59B525A4C80600DFEAD9 /* UI */,
+			);
+			path = TownsSwiftUI;
+			sourceTree = "<group>";
+		};
+		8F55CA8A257E2F8400EBDA3E /* SettingsFlow */ = {
+			isa = PBXGroup;
+			children = (
+				8FA7BB14257F8400002170D6 /* Cells */,
+				8FA7BB02257F698A002170D6 /* SettingsViewController.swift */,
+				8FA7BB06257F7570002170D6 /* RenderingViewController.swift */,
+				8FA7BB09257F777B002170D6 /* SelectionViewController.swift */,
+				8F77025E258B750900C3783D /* PropertiesViewController.swift */,
+				8FB389C4258CA1BC00718E75 /* PropertyEditViewController.swift */,
+				8FB389C7258CA7F400718E75 /* ValueEditViewController.swift */,
+			);
+			path = SettingsFlow;
+			sourceTree = "<group>";
+		};
+		8F8EFA6F259C74E300BA674F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8F8EFA70259C752200BA674F /* TownsListRowView.swift */,
+				8F8EFA74259C825200BA674F /* SearchBarView.swift */,
+				8F76A59825A31B1100EE723C /* WebView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8FA7BB01257F691B002170D6 /* MainFlow */ = {
+			isa = PBXGroup;
+			children = (
+				8F2076BD2587A282009D64BA /* Cells */,
+				8F2076BA258771B4009D64BA /* MainViewController.swift */,
+				8F3D59A725A4C39600DFEAD9 /* DemoPresenting.swift */,
+				8F2A2C3B25B5E9BA008A6D91 /* DemoConfigurability.swift */,
+				8FC1C0FC25A4671F00BF05DD /* DemoDetailViewController.swift */,
+			);
+			path = MainFlow;
+			sourceTree = "<group>";
+		};
+		8FA7BB14257F8400002170D6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8F770261258B97D600C3783D /* PropertiesHeaderView.swift */,
+				8FFDF667259A1357001F70EA /* PropertyEditCell.swift */,
+				8F6C7BE4258CF5060024795E /* StepperCell.swift */,
+				8F6C7BE1258CF4E60024795E /* SwitchCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8FDA84E025B822110002ABCE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FDA84E125B822110002ABCE /* Smartlook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F2F18AC25593CF800CC128C /* Smartlook Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F2F18C125593CF900CC128C /* Build configuration list for PBXNativeTarget "Smartlook Demo" */;
+			buildPhases = (
+				8F2F18A925593CF800CC128C /* Sources */,
+				8F2F18AA25593CF800CC128C /* Frameworks */,
+				8F2F18AB25593CF800CC128C /* Resources */,
+				8F81C684255D6482000976C0 /* SwiftLint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Smartlook Demo";
+			packageProductDependencies = (
+				8F6A439F25B5D6FC00E50034 /* SmartlookConsentSDK */,
+				8FDA850825B85B630002ABCE /* Smartlook */,
+			);
+			productName = "Smartlook Hiring";
+			productReference = 8F2F18AD25593CF800CC128C /* Smartlook Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F2F18A525593CF800CC128C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				ORGANIZATIONNAME = Smartlook;
+				TargetAttributes = {
+					8F2F18AC25593CF800CC128C = {
+						CreatedOnToolsVersion = 12.1;
+					};
+				};
+			};
+			buildConfigurationList = 8F2F18A825593CF800CC128C /* Build configuration list for PBXProject "Smartlook Demo" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8F2F18A425593CF800CC128C;
+			packageReferences = (
+				8F6A439E25B5D6FC00E50034 /* XCRemoteSwiftPackageReference "ios-consent-sdk" */,
+				8FDA850725B85B630002ABCE /* XCRemoteSwiftPackageReference "SmartlookSwiftPackage" */,
+			);
+			productRefGroup = 8F2F18AE25593CF800CC128C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F2F18AC25593CF800CC128C /* Smartlook Demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8F2F18AB25593CF800CC128C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F4AEFBC259C6AEA0064A37A /* TownsSwiftUI.storyboard in Resources */,
+				8F2F18BD25593CF900CC128C /* LaunchScreen.storyboard in Resources */,
+				8FA7BB28257F9A47002170D6 /* Localizable.strings in Resources */,
+				8FB02792257E8B860049923F /* Main.storyboard in Resources */,
+				8F2F18BA25593CF900CC128C /* Assets.xcassets in Resources */,
+				8F2F18B825593CF800CC128C /* Towns.storyboard in Resources */,
+				8F55CA8C257E376E00EBDA3E /* Settings.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8F81C684255D6482000976C0 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F2F18A925593CF800CC128C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FA7BB1C257F9055002170D6 /* SettingsData.swift in Sources */,
+				8F2F18D92559455C00CC128C /* TownPin.swift in Sources */,
+				8FA7BB0A257F777B002170D6 /* SelectionViewController.swift in Sources */,
+				8F76A59C25A31D4E00EE723C /* TownsDetailView.swift in Sources */,
+				8FB389C5258CA1BC00718E75 /* PropertyEditViewController.swift in Sources */,
+				8F770265258BB45800C3783D /* Property.swift in Sources */,
+				8FD1E73B25ADB5DA003A6156 /* AppSettings.swift in Sources */,
+				8FA7BB07257F7570002170D6 /* RenderingViewController.swift in Sources */,
+				8FD8534F25B04F6F00D3C4BC /* SwiftUI+Smartlook.swift in Sources */,
+				8F2F18E22559550900CC128C /* TownCell.swift in Sources */,
+				8F2F18B525593CF800CC128C /* ListViewController.swift in Sources */,
+				8F4AEFC0259C6FBD0064A37A /* TownsListView.swift in Sources */,
+				8FD96C6625A761BD00445FD0 /* UITableView+EmptyView.swift in Sources */,
+				8FD8535725B0961300D3C4BC /* SplitViewController.swift in Sources */,
+				8FA7BB03257F698A002170D6 /* SettingsViewController.swift in Sources */,
+				8F2076BB258771B4009D64BA /* MainViewController.swift in Sources */,
+				8FC1C0FD25A4671F00BF05DD /* DemoDetailViewController.swift in Sources */,
+				8FDA850625B858D90002ABCE /* TODO.swift in Sources */,
+				8FD96C6A25A76C2200445FD0 /* ButtonCell.swift in Sources */,
+				8FB389C8258CA7F400718E75 /* ValueEditViewController.swift in Sources */,
+				8F2F18B125593CF800CC128C /* AppDelegate.swift in Sources */,
+				8F77025F258B750900C3783D /* PropertiesViewController.swift in Sources */,
+				8F2F18E52559592800CC128C /* TownsData.swift in Sources */,
+				8F2076B725876509009D64BA /* UIView+CornerRadius.swift in Sources */,
+				8F2F18B325593CF800CC128C /* SceneDelegate.swift in Sources */,
+				8F2F18D22559435E00CC128C /* Town.swift in Sources */,
+				8F22758A258B546D00622794 /* FlowDemoHeaderView.swift in Sources */,
+				8FFDF6632599DD7C001F70EA /* String+Localized.swift in Sources */,
+				8F2A2C3C25B5E9BA008A6D91 /* DemoConfigurability.swift in Sources */,
+				8F8EFA75259C825200BA674F /* SearchBarView.swift in Sources */,
+				8F76A59925A31B1100EE723C /* WebView.swift in Sources */,
+				8F8EFA71259C752200BA674F /* TownsListRowView.swift in Sources */,
+				8F770262258B97D600C3783D /* PropertiesHeaderView.swift in Sources */,
+				8F3D59A825A4C39600DFEAD9 /* DemoPresenting.swift in Sources */,
+				8FA7BB0E257F8366002170D6 /* Selection.swift in Sources */,
+				8F2076BF2587A299009D64BA /* FlowDemoCell.swift in Sources */,
+				8F76A59F25A3242300EE723C /* TownsMapView.swift in Sources */,
+				8F2F18D6255944CD00CC128C /* MapController.swift in Sources */,
+				8F535D382588B17300B76FC1 /* DemosData.swift in Sources */,
+				8F6A43A525B5E26E00E50034 /* TownsDemoOptions.swift in Sources */,
+				8F4AEFB9259C68E50064A37A /* TownsView.swift in Sources */,
+				8F2A2C3F25B5EC2A008A6D91 /* TownsHostingController.swift in Sources */,
+				8FFDF668259A1357001F70EA /* PropertyEditCell.swift in Sources */,
+				8FD1E74225ADCEAF003A6156 /* AppSettingsManager.swift in Sources */,
+				8F6C7BE5258CF5060024795E /* StepperCell.swift in Sources */,
+				8F2F18CE2559425D00CC128C /* DetailViewController.swift in Sources */,
+				8F6C7BE2258CF4E60024795E /* SwitchCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8F2F18B625593CF800CC128C /* Towns.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F2F18B725593CF800CC128C /* Base */,
+			);
+			name = Towns.storyboard;
+			sourceTree = "<group>";
+		};
+		8F2F18BB25593CF900CC128C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F2F18BC25593CF900CC128C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8FA7BB26257F9A47002170D6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FA7BB27257F9A47002170D6 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8F2F18BF25593CF900CC128C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8F2F18C025593CF900CC128C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F2F18C225593CF900CC128C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L67NW37249;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "$(SRCROOT)/Smartlook Demo/Application/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.smartlook.smartlook-demo-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F2F18C325593CF900CC128C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L67NW37249;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "$(SRCROOT)/Smartlook Demo/Application/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.smartlook.smartlook-demo-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8F2F18A825593CF800CC128C /* Build configuration list for PBXProject "Smartlook Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F2F18BF25593CF900CC128C /* Debug */,
+				8F2F18C025593CF900CC128C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F2F18C125593CF900CC128C /* Build configuration list for PBXNativeTarget "Smartlook Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F2F18C225593CF900CC128C /* Debug */,
+				8F2F18C325593CF900CC128C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8F6A439E25B5D6FC00E50034 /* XCRemoteSwiftPackageReference "ios-consent-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/smartlook/ios-consent-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.0;
+			};
+		};
+		8FDA850725B85B630002ABCE /* XCRemoteSwiftPackageReference "SmartlookSwiftPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/smartlook/SmartlookSwiftPackage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8F6A439F25B5D6FC00E50034 /* SmartlookConsentSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F6A439E25B5D6FC00E50034 /* XCRemoteSwiftPackageReference "ios-consent-sdk" */;
+			productName = SmartlookConsentSDK;
+		};
+		8FDA850825B85B630002ABCE /* Smartlook */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FDA850725B85B630002ABCE /* XCRemoteSwiftPackageReference "SmartlookSwiftPackage" */;
+			productName = Smartlook;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8F2F18A525593CF800CC128C /* Project object */;
+}
