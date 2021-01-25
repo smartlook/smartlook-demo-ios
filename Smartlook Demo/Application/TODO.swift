@@ -9,7 +9,6 @@
 // TODO: Add tracking points to the main flow.
 // TODO: Resolve settings persistence.
 
-// TODO: Align demo cells to top in collection view (on the iPad).
 // TODO: Solve application backgrounds and hovercraft graphics.
 // TODO: Add options footer (info about options), review used texts.
 

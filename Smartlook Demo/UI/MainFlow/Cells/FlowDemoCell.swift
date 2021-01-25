@@ -20,15 +20,6 @@ class FlowDemoCell: UICollectionViewCell {
     @IBOutlet private weak var iconBackgroundView: UIView!
 
 
-    // MARK: - Public
-
-    lazy var width: NSLayoutConstraint = {
-        let width = contentView.widthAnchor.constraint(equalToConstant: bounds.size.width)
-        width.isActive = true
-        return width
-    }()
-
-
     // MARK: - Overrides
 
     override var isHighlighted: Bool {
@@ -52,12 +43,6 @@ class FlowDemoCell: UICollectionViewCell {
         layer.shadowOpacity = 0.15
         layer.masksToBounds = false
         layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: layer.cornerRadius).cgPath
-    }
-
-    override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority,
-                                          verticalFittingPriority: UILayoutPriority) -> CGSize {
-        width.constant = bounds.size.width
-        return contentView.systemLayoutSizeFitting(CGSize(width: targetSize.width, height: 1))
     }
 
 

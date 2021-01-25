@@ -13,12 +13,6 @@ class MainViewController: UIViewController, DemoPresenting {
     // MARK: - Outlets
 
     @IBOutlet private weak var collectionView: UICollectionView!
-    @IBOutlet private weak var collectionLayout: UICollectionViewFlowLayout! {
-        didSet {
-            collectionLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        }
-    }
-
     @IBOutlet private weak var shareButton: UIBarButtonItem!
 
 
@@ -30,19 +24,6 @@ class MainViewController: UIViewController, DemoPresenting {
         configureView()
     }
 
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        collectionLayout.estimatedItemSize = CGSize(width: view.bounds.size.width - 36, height: 10)
-
-        super.traitCollectionDidChange(previousTraitCollection)
-    }
-
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        collectionLayout.estimatedItemSize = CGSize(width: view.bounds.size.width - 36, height: 10)
-        collectionLayout.invalidateLayout()
-
-        super.viewWillTransition(to: size, with: coordinator)
-    }
-
 
     // MARK: - View setup
 
@@ -51,6 +32,44 @@ class MainViewController: UIViewController, DemoPresenting {
         let imageView = UIImageView(image: backgroundImage)
         imageView.contentMode = .topLeft
         collectionView.backgroundView = imageView
+
+        collectionView.collectionViewLayout = createCompositionalLayout()
+    }
+
+    func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
+        return UICollectionViewCompositionalLayout(sectionProvider: { (_, environment) -> NSCollectionLayoutSection? in
+            let itemsPerRow = environment.traitCollection.horizontalSizeClass == .compact ? 1 : 2
+            let fraction: CGFloat = 1 / CGFloat(itemsPerRow)
+
+            // Demo item
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(fraction),
+                                                  heightDimension: .estimated(105))
+            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+            item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 4, bottom: 0, trailing: 4)
+
+            // Group
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                                   heightDimension: .estimated(120))
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+            group.interItemSpacing = .fixed(4)
+
+            // Section
+            let section = NSCollectionLayoutSection(group: group)
+            section.contentInsets = NSDirectionalEdgeInsets(top: 4, leading: 12, bottom: 16, trailing: 0)
+            section.interGroupSpacing = 12
+
+            // Section header
+            let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                                    heightDimension: .estimated(300))
+            let headerItem = NSCollectionLayoutBoundarySupplementaryItem(
+                layoutSize: headerSize,
+                elementKind: UICollectionView.elementKindSectionHeader,
+                alignment: .top
+            )
+            section.boundarySupplementaryItems = [headerItem]
+
+            return section
+        })
     }
 
 
@@ -139,28 +158,6 @@ extension MainViewController: UICollectionViewDelegate {
         } else {
             showDemoDetail(for: demoItem)
         }
-    }
-}
-
-extension MainViewController: UICollectionViewDelegateFlowLayout {
-
-    // MARK: - Collection View Flow Layout Delegate
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let guide = view.safeAreaLayoutGuide
-        let safeAreaWidth = guide.layoutFrame.width
-        let columns = max(1, floor(safeAreaWidth / 300))
-
-        let insetsWidth = collectionLayout.sectionInset.left + collectionLayout.sectionInset.right
-        let itemsSpacing = collectionLayout.minimumInteritemSpacing * (columns + 1)
-
-        // Calculate minimal size for cell
-        var fittingSize = UIView.layoutFittingCompressedSize
-        let width = safeAreaWidth - insetsWidth - itemsSpacing
-        fittingSize.width = width / columns
-
-        return fittingSize
     }
 }
 

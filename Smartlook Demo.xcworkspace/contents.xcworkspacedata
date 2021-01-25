@@ -4,4 +4,7 @@
    <FileRef
       location = "container:Smartlook Demo.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:../smartlook-recorder-ios/Smartlook/Smartlook.xcodeproj">
+   </FileRef>
 </Workspace>

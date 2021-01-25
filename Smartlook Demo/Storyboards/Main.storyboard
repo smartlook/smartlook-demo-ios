@@ -48,11 +48,11 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SaJ-hz-S62">
                                 <rect key="frame" x="0.0" y="-52" width="414" height="948"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="12" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="1uL-Ys-bqA">
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" sectionInsetReference="layoutMargins" id="1uL-Ys-bqA">
                                     <size key="itemSize" width="357" height="117"/>
                                     <size key="headerReferenceSize" width="375" height="240"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="16"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlowDemoCell" id="BAJ-2z-W0A" customClass="FlowDemoCell" customModule="Smartlook_Demo" customModuleProvider="target">
@@ -233,7 +233,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="collectionLayout" destination="1uL-Ys-bqA" id="9Tf-h1-Utv"/>
                         <outlet property="collectionView" destination="SaJ-hz-S62" id="F70-yu-3iv"/>
                         <outlet property="shareButton" destination="4sq-8p-8Eq" id="fVO-hn-Td2"/>
                     </connections>

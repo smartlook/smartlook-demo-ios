@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         SmartlookConsentSDK.check(with: consentsSettingsDefaults) {
             if SmartlookConsentSDK.consentState(for: .analytics) == .provided {
-                Smartlook.startRecording()
+            //    Smartlook.startRecording()
             }
         }
 
