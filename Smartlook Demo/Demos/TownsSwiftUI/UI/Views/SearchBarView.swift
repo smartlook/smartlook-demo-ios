@@ -1,6 +1,6 @@
 //
 //  SearchBarView.swift
-//  Smartlook Demo App
+//  Smartlook Demo
 //
 //  Created by Václav Halík on 30.12.2020.
 //  Copyright © 2020 Smartlook. All rights reserved.

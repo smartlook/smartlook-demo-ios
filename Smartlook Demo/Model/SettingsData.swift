@@ -1,6 +1,6 @@
 //
 //  SettingsData.swift
-//  Smartlook Demo App
+//  Smartlook Demo
 //
 //  Created by Václav Halík on 08.12.2020.
 //  Copyright © 2020 Smartlook. All rights reserved.
@@ -9,14 +9,20 @@
 import Smartlook
 import WebKit
 
-/// Data store
+/// Runtime data sore for application settings.
+///
+/// - Precondition:
+/// In real applications, none of the following needs to be implemented (if you don't want to).
+/// Nevertheless, the following code can serve as an example of how to use and manage
+/// individual functions of the Smartlook API.
 struct SettingsData {
 
     /// Smartlook Api Key
     static var smartlookApiKey = ""
 
-    /// Settings for rendering framerate. It is not preserved between application starts.
-    /// The next time you run it, it will be overwritten by the settings from the Smartlook portal.
+    /// Settings for rendering framerate. In this demo application is preserved between
+    /// application starts. The next time you run it, the configuration from Smartlook portal
+    /// it will be overwritten by the last settings from application.
     struct Rendering {
 
         // MARK: - Public
@@ -55,6 +61,7 @@ struct SettingsData {
             }
         }
 
+        /// All available rendering modes as `SelectionData` for UI.
         static var modeItems: SelectionData {
             let availableModes = [
                 Smartlook.RenderingMode.native,
@@ -71,6 +78,7 @@ struct SettingsData {
             return SelectionData(id: "renderingModes", items: items)
         }
 
+        // All available rendering mode options as `SelectionData` for UI.
         static var modeOptionItems: SelectionData {
             let availableModeOptions = [
                 Smartlook.RenderingModeOption.none,
@@ -89,10 +97,13 @@ struct SettingsData {
         }
     }
 
+    /// Contains all privacy related settings. In this demo application is preserved between
+    /// application starts. They are considered user settings and are not controlled from the Smartlook portal.
     struct Privacy {
 
         // MARK: - Public
 
+        /// Contains list of classes that Smartlook API by default marked as sensitive view.
         static var denyList = defaultDenyList() {
             didSet {
                 // Update classes on deny list
@@ -111,6 +122,7 @@ struct SettingsData {
             }
         }
 
+        /// Contains identification of current user.
         static var userIdentifier: String? {
             didSet {
                 if userIdentifier?.isEmpty ?? false {
@@ -122,6 +134,7 @@ struct SettingsData {
             }
         }
 
+        /// Data for session properties. These additional custom properties will be added to each recording session.
         static var sessionProperties = PropertiesData(id: "sessionProperties") {
             didSet {
                 PropertiesData.updateProperties(from: oldValue, to: sessionProperties,
@@ -159,10 +172,13 @@ struct SettingsData {
         }
     }
 
+    /// Global settings for analytics functions. In this demo application is preserved between
+    /// application starts. They are considered user settings and are not controlled from the Smartlook portal.
     struct Analytics {
 
         // MARK: - Public
 
+        /// Allows disable some automatically detected events due to security or usability reasons.
         static var eventTrackingModeItems = defaultEventTrackingModes() {
             didSet {
                 // Update tracking modes
@@ -172,6 +188,7 @@ struct SettingsData {
             }
         }
 
+        /// Data for global event properties. These additional properties will be to attached to every event.
         static var globalProperties = PropertiesData(id: "globalProperties") {
             didSet {
                 PropertiesData.updateProperties(from: oldValue, to: globalProperties,

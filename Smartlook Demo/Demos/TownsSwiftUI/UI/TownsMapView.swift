@@ -1,6 +1,6 @@
 //
 //  TownsMapView.swift
-//  Smartlook Demo App
+//  Smartlook Demo
 //
 //  Created by Václav Halík on 04.01.2021.
 //  Copyright © 2021 Smartlook. All rights reserved.

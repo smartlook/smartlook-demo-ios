@@ -1,6 +1,6 @@
 //
 //  ListViewController.swift
-//  Smartlook Demo App
+//  Smartlook Demo
 //
 //  Copyright © 2020 Smartlook. All rights reserved.
 //
