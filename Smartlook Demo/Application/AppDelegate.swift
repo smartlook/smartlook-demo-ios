@@ -27,10 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Smartlook Consent SDK
         var consentsSettingsDefaults = SmartlookConsentSDK.ConsentsSettings()
         consentsSettingsDefaults.append((.privacy, .provided))
-        consentsSettingsDefaults.append((.analytics, .notProvided))
+        consentsSettingsDefaults.append((.analytics, .provided))
 
         SmartlookConsentSDK.check(with: consentsSettingsDefaults) {
-            if SmartlookConsentSDK.consentState(for: .analytics) == .provided {
+            if SmartlookConsentSDK.consentState(for: .privacy) == .provided {
             //    Smartlook.startRecording()
             }
         }

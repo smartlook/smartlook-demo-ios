@@ -79,8 +79,8 @@
 // Towns (SwiftUI)
 "towns-swiftui-demo-name" = "Towns List";
 "towns-swiftui-demo-perex" = "Simple application flow with DoubleColumn navigation for finding information about Czech cities.";
-"towns-swiftui-demo-notes" = "Towns List demo notes.";
-"towns-swiftui-demo-developer-notes" = "Towns List developer notes";
+"towns-swiftui-demo-notes" = "Shows sample flow with the ability to search for items in a list, filter them and display their detail in WebView. The demo also shows the use of map data and interaction with the map.";
+"towns-swiftui-demo-developer-notes" = "The demo uses standard SwiftUI views such as List, Text, TextField, Image, Map or stacks. Navigation is implemented in a SwiftUI style using NavigationView and NavigationLink. It also uses WKWebView to display content.";
 
 // Towns options
 "map-sensitivity-option-name" = "Mark map as sensitive";
@@ -89,14 +89,14 @@
 /* Consent SDK */
 // Title and into text
 "smartlook-consent-sdk-title" = "Consents for $APP"; //$APP is replaced by the app display name and the name is highlighted then.
-"smartlook-consent-sdk-text" = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante.\n\nCurabitur vitae diam non enim vestibulum interdum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.";
+"smartlook-consent-sdk-text" = "Below you can set up consent to the sharing of analytical data with the developer of the application. This data will be used only for the needs of support and further development of this application.\n\nBelow, I consent to the use of the data for the following purposes:";
 
 // Texts for privacy consent
-"smartlook-consent-sdk-privacy-consent" = "Privacy consent proin mattis lacinia justo. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede.";
+"smartlook-consent-sdk-privacy-consent" = "Sharing information about usage and ways to use the application with the application developer using third-party tools.";
 "smartlook-consent-sdk-privacy-consent-url" = "https://www.smartlook.com";
 
 // Texts for analytics consent
-"smartlook-consent-sdk-analytics-consent" = "Analytics consent aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Morbi scelerisque luctus velit. Nunc auctor. ";
+"smartlook-consent-sdk-analytics-consent" = "Sharing anonymous analytical information about the use of the application that cannot be linked to a specific user.";
 //"consent-sdk-analytics-consent-url" = "https://www.smartlook.com";
 
 // The button

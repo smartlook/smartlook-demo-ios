@@ -16,7 +16,7 @@ struct DemoOption {
     var enabled: Bool = true
 
 
-    // MARK: - Loacalized texts
+    // MARK: - Localized texts
 
     var nameLocalized: String {
         "\(id)-option-name".localized
@@ -58,7 +58,7 @@ struct DemoItem {
     var detail: DemoDetail?
 
 
-    // MARK: - Loacalized texts
+    // MARK: - Localized texts
 
     var nameLocalized: String {
         "\(id)-name".localized

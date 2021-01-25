@@ -47,7 +47,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Privacy" footerTitle="Contains a list of sensitive components that are in the SDK by default hidden locally on the device." id="6Cx-3H-tpT">
+                            <tableViewSection headerTitle="Privacy" footerTitle="Deny list contains a list of sensitive components that are in the SDK by default hidden locally on the device." id="6Cx-3H-tpT">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SettingsDenyListCell" textLabel="uQ8-lE-r7p" detailTextLabel="yb9-ND-Ejw" style="IBUITableViewCellStyleValue1" id="uym-de-wFe">
                                         <rect key="frame" x="20" y="190.5" width="374" height="43.5"/>
@@ -132,10 +132,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Analytics" id="6rs-dh-0NY">
+                            <tableViewSection headerTitle="Analytics" footerTitle="Event tracking allows disable some automatically detected events due to security or usability reasons." id="6rs-dh-0NY">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SettingsEventTrackingCell" textLabel="gfq-Ck-Eg0" detailTextLabel="zdI-SP-Rjg" style="IBUITableViewCellStyleValue1" id="AYl-k0-uzl">
-                                        <rect key="frame" x="20" y="405" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="412.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AYl-k0-uzl" id="A5W-he-uu7">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
@@ -162,7 +162,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SettingsGlobalPropertiesCell" textLabel="tmb-CE-5GD" detailTextLabel="EsW-Ab-lmL" style="IBUITableViewCellStyleValue1" id="ETJ-TU-P70">
-                                        <rect key="frame" x="20" y="448.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="456" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ETJ-TU-P70" id="TrA-uU-8YN">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
@@ -193,7 +193,7 @@
                             <tableViewSection headerTitle="Consent SDK" id="bJO-2P-VsZ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsConsentCell" textLabel="tD4-71-YA8" style="IBUITableViewCellStyleDefault" id="PH7-TC-tic" userLabel="Consent Cell">
-                                        <rect key="frame" x="20" y="548" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="583.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PH7-TC-tic" id="yQy-cd-eG7">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -409,7 +409,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <sections>
-                            <tableViewSection headerTitle="Rendering" id="gja-Wq-9Cj">
+                            <tableViewSection headerTitle="Rendering" footerTitle="Current method and its options for capturing screen image data." id="gja-Wq-9Cj">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RenderingModeCell" textLabel="u5s-oK-Vm1" detailTextLabel="VLd-Yy-zjl" style="IBUITableViewCellStyleValue1" id="ihJ-oA-NHa" userLabel="Mode Cell">
                                         <rect key="frame" x="20" y="55.5" width="374" height="43.5"/>
@@ -467,10 +467,11 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Framerate" footerTitle="Note that by setting this value settings from Dashboard will be overridden!" id="xs2-At-0Ej">
+                            <tableViewSection headerTitle="Framerate" id="xs2-At-0Ej">
+                                <string key="footerTitle">Every change of framerate settings causes stop recording for small time. However, the Smartlook backend automatically connects the recordings, so this is not visible in final records.</string>
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RenderingAdaptiveCell" id="RVi-xc-Rzf" customClass="SwitchCell" customModule="Smartlook_Demo" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="206" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="234" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RVi-xc-Rzf" id="SVC-q1-MfF">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -504,7 +505,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RenderingFramerateCell" id="asd-8k-IPQ" customClass="StepperCell" customModule="Smartlook_Demo" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="249.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="277.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="asd-8k-IPQ" id="Vkf-1j-yTJ">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -551,7 +552,7 @@
                             <tableViewSection headerTitle="Session" id="mgX-7n-vsz">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RenderingResetCell" textLabel="4OU-y8-46V" style="IBUITableViewCellStyleDefault" id="MKX-JB-yqP">
-                                        <rect key="frame" x="20" y="377" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="437" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MKX-JB-yqP" id="QuY-Ct-7eZ">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -568,7 +569,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RenderingResetUserCell" textLabel="Pa8-yK-Fl7" style="IBUITableViewCellStyleDefault" id="Rdx-sQ-Qm3">
-                                        <rect key="frame" x="20" y="420.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="20" y="480.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rdx-sQ-Qm3" id="NsT-qg-PpY">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
