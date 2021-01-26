@@ -75,6 +75,17 @@ class MainViewController: UIViewController, DemoPresenting {
 
     // MARK: - Navigation
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+
+        if
+            let identifier = segue.identifier, identifier == "ShowSettings",
+            let navigationController = segue.destination as? UINavigationController
+        {
+            navigationController.presentationController?.delegate = self
+        }
+    }
+
     private func showDemoDetail(for item: DemoItem) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController: UIViewController?
@@ -84,9 +95,9 @@ class MainViewController: UIViewController, DemoPresenting {
 
         if
             let navigationController = viewController as? UINavigationController,
-            let demoDetailViewController = navigationController.viewControllers.first as? DemoDetailViewController {
+            let demoDetailViewController = navigationController.viewControllers.first as? DemoDetailViewController
+        {
             demoDetailViewController.item = item
-
             self.present(navigationController, animated: true, completion: nil)
         }
     }
@@ -106,6 +117,15 @@ class MainViewController: UIViewController, DemoPresenting {
 
         // Present system share controller
         self.present(activityViewController, animated: true)
+    }
+}
+
+extension MainViewController: UIAdaptivePresentationControllerDelegate {
+
+    // MARK: - UIAdaptivePresentationControllerDelegate methods
+
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        AppSettingsManager().save()
     }
 }
 

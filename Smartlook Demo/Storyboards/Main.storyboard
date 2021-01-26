@@ -222,7 +222,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Settings" image="gearshape" catalog="system" id="8Iz-RW-bsZ">
                             <color key="tintColor" name="AppTintColor"/>
                             <connections>
-                                <segue destination="CHU-nh-gNt" kind="presentation" id="dJE-2u-2LJ"/>
+                                <segue destination="CHU-nh-gNt" kind="presentation" identifier="ShowSettings" id="dJE-2u-2LJ"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="4sq-8p-8Eq">

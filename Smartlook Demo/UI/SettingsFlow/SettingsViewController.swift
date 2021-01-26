@@ -124,6 +124,7 @@ class SettingsViewController: UITableViewController {
     // MARK: - UI Actions
 
     @IBAction private func doneButtonAction(_ sender: Any) {
+        AppSettingsManager().save()
         dismiss(animated: true)
     }
 

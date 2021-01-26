@@ -7,7 +7,6 @@
 //
 
 // TODO: Add tracking points to the main flow.
-// TODO: Resolve settings persistence.
 // TODO: Add reaction to privacy settings.
 
 // TODO: Solve application backgrounds and hovercraft graphics.

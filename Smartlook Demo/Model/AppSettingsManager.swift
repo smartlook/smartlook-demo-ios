@@ -7,8 +7,31 @@
 //
 
 import Foundation
+import Smartlook
 
 class AppSettingsManager {
+
+    // MARK: - Settings synchronization
+
+    func sync() {
+        // Loads last settings state from storage and apply to SDK
+        if let appSettings = load() {
+            updateSettingsData(with: appSettings)
+
+            return
+        }
+
+        // If we do not have yet any setting saved,
+        // we will try get some from the Smartlook SDK
+        if Smartlook.isRecording() {
+            save()
+        } else {
+            Smartlook.startRecording()
+            save()
+            Smartlook.stopRecording()
+        }
+    }
+
 
     // MARK: - Persistence of settings data
 
@@ -55,7 +78,9 @@ class AppSettingsManager {
     }
 
     private func updateSettingsData(with appSettings: AppSettings) {
-        SettingsData.smartlookApiKey = appSettings.smartlookApiKey ?? ""
+        if SettingsData.smartlookApiKey.isEmpty {
+            SettingsData.smartlookApiKey = appSettings.smartlookApiKey ?? ""
+        }
 
         SettingsData.Rendering.currentMode = appSettings.renderingMode
         SettingsData.Rendering.currentModeOption = appSettings.renderingModeOption

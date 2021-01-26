@@ -31,17 +31,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         SmartlookConsentSDK.check(with: consentsSettingsDefaults) {
             if SmartlookConsentSDK.consentState(for: .privacy) == .provided {
-            //    Smartlook.startRecording()
+                Smartlook.startRecording()
             }
         }
 
         // Reuse apiKey for settings dialog
         SettingsData.smartlookApiKey = smartlookApiKey
-
-//        // Settings store test
-//        let manager = AppSettingsManager()
-//        manager.save()
-//        let appSettings = manager.load()
+        AppSettingsManager().sync()
 
         return true
     }
