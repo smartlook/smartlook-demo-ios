@@ -146,13 +146,13 @@
                                     <rect key="frame" x="0.0" y="8" width="414" height="240"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SDK recording" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q74-sZ-dlz" userLabel="SDK State Label">
-                                            <rect key="frame" x="261" y="203" width="100" height="18"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="SDK recording" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q74-sZ-dlz" userLabel="SDK State Label">
+                                            <rect key="frame" x="157" y="203" width="204" height="18"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tkw-uu-8kz">
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="right" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tkw-uu-8kz">
                                             <rect key="frame" x="365" y="196" width="33" height="32"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="tintColor" systemColor="systemRedColor"/>
@@ -167,7 +167,7 @@
                                                 <action selector="recordingButtonValueChangedWithSender:" destination="UFL-zJ-WkU" eventType="touchUpInside" id="cfv-pT-ao5"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Available demos" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P59-Mu-l4J">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="749" text="Available demos" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P59-Mu-l4J">
                                             <rect key="frame" x="20" y="200" width="129" height="24"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <nil key="textColor"/>
@@ -186,7 +186,7 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstItem="q74-sZ-dlz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="P59-Mu-l4J" secondAttribute="trailing" constant="8" symbolic="YES" id="970-5L-jmx"/>
+                                        <constraint firstItem="q74-sZ-dlz" firstAttribute="leading" secondItem="P59-Mu-l4J" secondAttribute="trailing" constant="8" symbolic="YES" id="970-5L-jmx"/>
                                         <constraint firstItem="q74-sZ-dlz" firstAttribute="centerY" secondItem="Tkw-uu-8kz" secondAttribute="centerY" id="9W3-cZ-74s"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Tkw-uu-8kz" secondAttribute="trailing" constant="8" id="FW4-oS-5YT"/>
                                         <constraint firstItem="P59-Mu-l4J" firstAttribute="leading" secondItem="UFL-zJ-WkU" secondAttribute="leadingMargin" constant="12" id="YQA-Bq-Jlb"/>
@@ -194,7 +194,7 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="P59-Mu-l4J" secondAttribute="bottom" constant="8" id="gy5-Iq-hAb"/>
                                         <constraint firstItem="wfj-cw-Vz3" firstAttribute="top" secondItem="UFL-zJ-WkU" secondAttribute="top" constant="56" id="qio-Q9-rDG"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="wfj-cw-Vz3" secondAttribute="trailing" constant="-8" id="tp2-V8-r5p"/>
-                                        <constraint firstItem="q74-sZ-dlz" firstAttribute="centerY" secondItem="P59-Mu-l4J" secondAttribute="centerY" id="z72-zd-o0X"/>
+                                        <constraint firstItem="Tkw-uu-8kz" firstAttribute="centerY" secondItem="P59-Mu-l4J" secondAttribute="centerY" id="z72-zd-o0X"/>
                                         <constraint firstItem="Tkw-uu-8kz" firstAttribute="leading" secondItem="q74-sZ-dlz" secondAttribute="trailing" constant="4" id="zaN-JJ-m3e"/>
                                         <constraint firstAttribute="bottom" secondItem="Tkw-uu-8kz" secondAttribute="bottom" constant="12" id="zhA-A3-88a"/>
                                     </constraints>
@@ -239,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vzs-8r-wPw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="295.19999999999999" y="98.50074962518741"/>
+            <point key="canvasLocation" x="294.20289855072468" y="98.4375"/>
         </scene>
         <!--Demo detail-->
         <scene sceneID="8na-5h-4Eh">

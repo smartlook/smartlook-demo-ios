@@ -261,7 +261,7 @@ struct SettingsData {
         Smartlook.setup(configuration: configuration)
 
         if isRecording {
-            Smartlook.stopRecording()
+            Smartlook.startRecording()
         }
     }
 }

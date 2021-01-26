@@ -131,7 +131,7 @@ class SettingsViewController: UITableViewController {
     private func reviewConsents() {
         // Let user review or check the consents
         SmartlookConsentSDK.show {
-            if SmartlookConsentSDK.consentState(for: .analytics) != .provided {
+            if SmartlookConsentSDK.consentState(for: .privacy) != .provided {
                 // Stop analytics tools
                 Smartlook.stopRecording()
             }

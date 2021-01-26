@@ -62,6 +62,7 @@
 /* Main screen */
 "sdk-recording" = "SDK recording";
 "sdk-suspended" = "SDK suspended";
+"consent-issue" = "Consent issue, SDK disabled!";
 
 /* Demo detail screen */
 "demo-notes" = "Demo notes";

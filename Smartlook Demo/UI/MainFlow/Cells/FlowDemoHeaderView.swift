@@ -27,7 +27,17 @@ class FlowDemoHeaderView: UICollectionReusableView {
 
     // MARK: - View setup
 
-    public func setupContent(recording: Bool) {
+    public func setupContent(recording: Bool, consent: Bool) {
+        guard consent else {
+            let buttonImage = UIImage(systemName: "person.circle")
+            recordingButton.setImage(buttonImage, for: .normal)
+            recordingButton.imageView?.tintColor = .systemRed
+            sdkStateLabel.text = "consent-issue".localized
+
+            return
+        }
+
+        // The user has given his consent to the use of analytical functions
         let recordingText = "sdk-recording".localized
         let suspendedText = "sdk-suspended".localized
         sdkStateLabel.text = recording ? recordingText : suspendedText

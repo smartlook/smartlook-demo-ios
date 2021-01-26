@@ -7,6 +7,7 @@
 //
 
 import Smartlook
+import SmartlookConsentSDK
 
 class MainViewController: UIViewController, DemoPresenting {
 
@@ -16,10 +17,26 @@ class MainViewController: UIViewController, DemoPresenting {
     @IBOutlet private weak var shareButton: UIBarButtonItem!
 
 
+    // MARK: - Private
+
+    private var hasConsent: Bool {
+        SmartlookConsentSDK.consentState(for: .privacy) == .provided
+    }
+
+
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // This is not necessary if all the logic is handled in the `SmartlookConsentSDK.check`
+        // or `SmartlookConsentSDK.show` callbacks may be usefully eg.,
+        // if some UI depends on the consents state like here.
+        let notificationName = SmartlookConsentSDK.consentsTouchedNotification
+        _ = NotificationCenter.default.addObserver(forName: notificationName, object: nil, queue: nil) { (_) in
+            // Updates recording state in header
+            self.collectionView.reloadData()
+        }
 
         configureView()
     }
@@ -102,6 +119,16 @@ class MainViewController: UIViewController, DemoPresenting {
         }
     }
 
+    private func reviewConsents() {
+        // Let user review or check the consents
+        SmartlookConsentSDK.show {
+            if SmartlookConsentSDK.consentState(for: .privacy) != .provided {
+                // Stop analytics tools
+                Smartlook.stopRecording()
+            }
+        }
+    }
+
 
     // MARK: - UI Actions
 
@@ -138,7 +165,7 @@ extension MainViewController: UICollectionViewDataSource {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "FlowDemoHeader",
                                                                          for: indexPath) as? FlowDemoHeaderView
         headerView?.delegate = self
-        headerView?.setupContent(recording: Smartlook.isRecording())
+        headerView?.setupContent(recording: Smartlook.isRecording(), consent: hasConsent)
 
         return headerView!
     }
@@ -186,6 +213,12 @@ extension MainViewController: FlowDemoHeaderViewDelegate {
     // MARK: - FlowDemoHeaderViewDelegate methods
 
     func recordingButtonPressed() {
+        guard hasConsent else {
+            reviewConsents()
+            return
+        }
+
+        // Consent allows start recording
         if Smartlook.isRecording() {
             Smartlook.stopRecording()
         } else {
