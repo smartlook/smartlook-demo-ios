@@ -9,6 +9,15 @@
           "revision": "268dff63859f4e91de71aadaa153af44cf455824",
           "version": "1.6.0"
         }
+      },
+      {
+        "package": "Smartlook",
+        "repositoryURL": "https://github.com/smartlook/SmartlookSwiftPackage",
+        "state": {
+          "branch": null,
+          "revision": "88e70e53810ac17c914718007e76be848631fb12",
+          "version": "1.7.1"
+        }
       }
     ]
   },

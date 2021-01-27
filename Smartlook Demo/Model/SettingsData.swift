@@ -108,11 +108,11 @@ struct SettingsData {
             didSet {
                 // Update classes on deny list
                 for (index, item) in denyList.items.enumerated() {
-                    guard index < defaultDenyClases.count else {
+                    guard index < defaultDenyClasses.count else {
                         continue
                     }
 
-                    let itemClass: AnyClass = defaultDenyClases[index]
+                    let itemClass: AnyClass = defaultDenyClasses[index]
                     if item.selected {
                         Smartlook.registerBlacklisted(object: itemClass.self)
                     } else {
@@ -150,7 +150,7 @@ struct SettingsData {
 
         // MARK: - Private
 
-        private static var defaultDenyClases: [AnyClass] {
+        private static var defaultDenyClasses: [AnyClass] {
             [
                 UITextView.self,
                 UITextField.self,
@@ -162,7 +162,7 @@ struct SettingsData {
 
         private static func defaultDenyList() -> SelectionData {
             var items = [SelectionItem]()
-            for denyClass in defaultDenyClases {
+            for denyClass in defaultDenyClasses {
                 let denyClassName = String(describing: denyClass)
                 let selected = denyClassName != "WKWebView" ? true : false
                 items.append(SelectionItem(label: denyClassName, value: denyClassName, selected: selected))

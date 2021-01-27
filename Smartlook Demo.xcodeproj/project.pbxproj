@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F0293F125C1B06100998102 /* Smartlook in Frameworks */ = {isa = PBXBuildFile; productRef = 8F0293F025C1B06100998102 /* Smartlook */; };
 		8F2076B725876509009D64BA /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2076B625876509009D64BA /* UIView+CornerRadius.swift */; };
 		8F2076BB258771B4009D64BA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2076BA258771B4009D64BA /* MainViewController.swift */; };
 		8F2076BF2587A299009D64BA /* FlowDemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2076BE2587A299009D64BA /* FlowDemoCell.swift */; };
@@ -43,8 +44,6 @@
 		8F770265258BB45800C3783D /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F770264258BB45800C3783D /* Property.swift */; };
 		8F8EFA71259C752200BA674F /* TownsListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8EFA70259C752200BA674F /* TownsListRowView.swift */; };
 		8F8EFA75259C825200BA674F /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8EFA74259C825200BA674F /* SearchBarView.swift */; };
-		8FA4782725B871D40060A186 /* Smartlook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA4782625B871D40060A186 /* Smartlook.framework */; };
-		8FA4782825B871D40060A186 /* Smartlook.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA4782625B871D40060A186 /* Smartlook.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8FA7BB03257F698A002170D6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7BB02257F698A002170D6 /* SettingsViewController.swift */; };
 		8FA7BB07257F7570002170D6 /* RenderingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7BB06257F7570002170D6 /* RenderingViewController.swift */; };
 		8FA7BB0A257F777B002170D6 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA7BB09257F777B002170D6 /* SelectionViewController.swift */; };
@@ -61,7 +60,6 @@
 		8FD8535725B0961300D3C4BC /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD8535625B0961300D3C4BC /* SplitViewController.swift */; };
 		8FD96C6625A761BD00445FD0 /* UITableView+EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD96C6525A761BD00445FD0 /* UITableView+EmptyView.swift */; };
 		8FD96C6A25A76C2200445FD0 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD96C6925A76C2200445FD0 /* ButtonCell.swift */; };
-		8FDA850625B858D90002ABCE /* TODO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDA850525B858D90002ABCE /* TODO.swift */; };
 		8FFDF6632599DD7C001F70EA /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFDF6622599DD7C001F70EA /* String+Localized.swift */; };
 		8FFDF668259A1357001F70EA /* PropertyEditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFDF667259A1357001F70EA /* PropertyEditCell.swift */; };
 /* End PBXBuildFile section */
@@ -73,7 +71,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8FA4782825B871D40060A186 /* Smartlook.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,7 +115,6 @@
 		8F770264258BB45800C3783D /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		8F8EFA70259C752200BA674F /* TownsListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownsListRowView.swift; sourceTree = "<group>"; };
 		8F8EFA74259C825200BA674F /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
-		8FA4782625B871D40060A186 /* Smartlook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Smartlook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA7BB02257F698A002170D6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8FA7BB06257F7570002170D6 /* RenderingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderingViewController.swift; sourceTree = "<group>"; };
 		8FA7BB09257F777B002170D6 /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
@@ -135,8 +131,6 @@
 		8FD8535625B0961300D3C4BC /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		8FD96C6525A761BD00445FD0 /* UITableView+EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+EmptyView.swift"; sourceTree = "<group>"; };
 		8FD96C6925A76C2200445FD0 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
-		8FDA84E125B822110002ABCE /* Smartlook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Smartlook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FDA850525B858D90002ABCE /* TODO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODO.swift; sourceTree = "<group>"; };
 		8FDA851025B863860002ABCE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8FFDF6622599DD7C001F70EA /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		8FFDF667259A1357001F70EA /* PropertyEditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyEditCell.swift; sourceTree = "<group>"; };
@@ -148,7 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F6A43A025B5D6FC00E50034 /* SmartlookConsentSDK in Frameworks */,
-				8FA4782725B871D40060A186 /* Smartlook.framework in Frameworks */,
+				8F0293F125C1B06100998102 /* Smartlook in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,7 +216,6 @@
 				8F2F18B025593CF800CC128C /* AppDelegate.swift */,
 				8F2F18B225593CF800CC128C /* SceneDelegate.swift */,
 				8F2F18BE25593CF900CC128C /* Info.plist */,
-				8FDA850525B858D90002ABCE /* TODO.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -422,8 +415,6 @@
 		8FDA84E025B822110002ABCE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8FA4782625B871D40060A186 /* Smartlook.framework */,
-				8FDA84E125B822110002ABCE /* Smartlook.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -448,6 +439,7 @@
 			name = "Smartlook Demo";
 			packageProductDependencies = (
 				8F6A439F25B5D6FC00E50034 /* SmartlookConsentSDK */,
+				8F0293F025C1B06100998102 /* Smartlook */,
 			);
 			productName = "Smartlook Hiring";
 			productReference = 8F2F18AD25593CF800CC128C /* Smartlook Demo.app */;
@@ -479,6 +471,7 @@
 			mainGroup = 8F2F18A425593CF800CC128C;
 			packageReferences = (
 				8F6A439E25B5D6FC00E50034 /* XCRemoteSwiftPackageReference "ios-consent-sdk" */,
+				8F0293EF25C1B06100998102 /* XCRemoteSwiftPackageReference "SmartlookSwiftPackage" */,
 			);
 			productRefGroup = 8F2F18AE25593CF800CC128C /* Products */;
 			projectDirPath = "";
@@ -549,7 +542,6 @@
 				8FA7BB03257F698A002170D6 /* SettingsViewController.swift in Sources */,
 				8F2076BB258771B4009D64BA /* MainViewController.swift in Sources */,
 				8FC1C0FD25A4671F00BF05DD /* DemoDetailViewController.swift in Sources */,
-				8FDA850625B858D90002ABCE /* TODO.swift in Sources */,
 				8FD96C6A25A76C2200445FD0 /* ButtonCell.swift in Sources */,
 				8FB389C8258CA7F400718E75 /* ValueEditViewController.swift in Sources */,
 				8F2F18B125593CF800CC128C /* AppDelegate.swift in Sources */,
@@ -796,6 +788,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8F0293EF25C1B06100998102 /* XCRemoteSwiftPackageReference "SmartlookSwiftPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/smartlook/SmartlookSwiftPackage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.1;
+			};
+		};
 		8F6A439E25B5D6FC00E50034 /* XCRemoteSwiftPackageReference "ios-consent-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/smartlook/ios-consent-sdk";
@@ -807,6 +807,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8F0293F025C1B06100998102 /* Smartlook */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F0293EF25C1B06100998102 /* XCRemoteSwiftPackageReference "SmartlookSwiftPackage" */;
+			productName = Smartlook;
+		};
 		8F6A439F25B5D6FC00E50034 /* SmartlookConsentSDK */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8F6A439E25B5D6FC00E50034 /* XCRemoteSwiftPackageReference "ios-consent-sdk" */;

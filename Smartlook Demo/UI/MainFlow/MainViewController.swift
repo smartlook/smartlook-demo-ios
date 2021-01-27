@@ -126,6 +126,9 @@ class MainViewController: UIViewController, DemoPresenting {
                 // Stop analytics tools
                 Smartlook.stopRecording()
             }
+
+            // Track custom event about consent issue
+            Smartlook.trackCustomEvent(name: "review-consent".localized, props: ["source": "Dashboard"])
         }
     }
 

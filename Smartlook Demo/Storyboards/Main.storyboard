@@ -50,13 +50,13 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" sectionInsetReference="layoutMargins" id="1uL-Ys-bqA">
                                     <size key="itemSize" width="357" height="117"/>
-                                    <size key="headerReferenceSize" width="375" height="240"/>
+                                    <size key="headerReferenceSize" width="375" height="256"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlowDemoCell" id="BAJ-2z-W0A" customClass="FlowDemoCell" customModule="Smartlook_Demo" customModuleProvider="target">
-                                        <rect key="frame" x="58.5" y="248" width="297" height="104.5"/>
+                                        <rect key="frame" x="58.5" y="264" width="297" height="104.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wTj-NE-nV3">
                                             <rect key="frame" x="0.0" y="0.0" width="297" height="104.5"/>
@@ -143,17 +143,17 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlowDemoHeader" id="UFL-zJ-WkU" customClass="FlowDemoHeaderView" customModule="Smartlook_Demo" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="8" width="414" height="240"/>
+                                    <rect key="frame" x="0.0" y="8" width="414" height="256"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="SDK recording" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q74-sZ-dlz" userLabel="SDK State Label">
-                                            <rect key="frame" x="157" y="203" width="204" height="18"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="SDK recording" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q74-sZ-dlz" userLabel="SDK State Label">
+                                            <rect key="frame" x="157" y="219" width="204" height="18"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="right" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tkw-uu-8kz">
-                                            <rect key="frame" x="365" y="196" width="33" height="32"/>
+                                            <rect key="frame" x="365" y="212" width="33" height="32"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="tintColor" systemColor="systemRedColor"/>
                                             <inset key="contentEdgeInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
@@ -168,13 +168,13 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="749" text="Available demos" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P59-Mu-l4J">
-                                            <rect key="frame" x="20" y="200" width="129" height="24"/>
+                                            <rect key="frame" x="20" y="216" width="129" height="24"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hovercraft" translatesAutoresizingMaskIntoConstraints="NO" id="wfj-cw-Vz3">
-                                            <rect key="frame" x="144" y="56" width="270" height="126"/>
+                                            <rect key="frame" x="144" y="72" width="270" height="126"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                             <constraints>
@@ -192,7 +192,7 @@
                                         <constraint firstItem="P59-Mu-l4J" firstAttribute="leading" secondItem="UFL-zJ-WkU" secondAttribute="leadingMargin" constant="12" id="YQA-Bq-Jlb"/>
                                         <constraint firstItem="P59-Mu-l4J" firstAttribute="top" secondItem="wfj-cw-Vz3" secondAttribute="bottom" constant="18" id="bp9-0F-Zz1"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="P59-Mu-l4J" secondAttribute="bottom" constant="8" id="gy5-Iq-hAb"/>
-                                        <constraint firstItem="wfj-cw-Vz3" firstAttribute="top" secondItem="UFL-zJ-WkU" secondAttribute="top" constant="56" id="qio-Q9-rDG"/>
+                                        <constraint firstItem="wfj-cw-Vz3" firstAttribute="top" secondItem="UFL-zJ-WkU" secondAttribute="top" constant="72" id="qio-Q9-rDG"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="wfj-cw-Vz3" secondAttribute="trailing" constant="-8" id="tp2-V8-r5p"/>
                                         <constraint firstItem="Tkw-uu-8kz" firstAttribute="centerY" secondItem="P59-Mu-l4J" secondAttribute="centerY" id="z72-zd-o0X"/>
                                         <constraint firstItem="Tkw-uu-8kz" firstAttribute="leading" secondItem="q74-sZ-dlz" secondAttribute="trailing" constant="4" id="zaN-JJ-m3e"/>
@@ -367,7 +367,7 @@
     <resources>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="hand.tap" catalog="system" width="113" height="128"/>
-        <image name="hovercraft" width="646.21002197265625" height="417.52999877929688"/>
+        <image name="hovercraft" width="647" height="418"/>
         <image name="record.circle" catalog="system" width="128" height="121"/>
         <namedColor name="AppTintColor">
             <color red="0.070000000298023224" green="0.18799999356269836" blue="0.51800000667572021" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

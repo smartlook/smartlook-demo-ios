@@ -79,8 +79,7 @@ struct SmartlookTrackEventModifier: ViewModifier {
     func body(content: Content) -> some View {
         content.simultaneousGesture(TapGesture().onEnded({
             if enabled {
-                // print("name: \(eventName), props: \(params)")
-                // Smartlook.trackCustomEvent(name: eventName, props: params)
+                 Smartlook.trackCustomEvent(name: eventName, props: params)
             }
         }))
     }

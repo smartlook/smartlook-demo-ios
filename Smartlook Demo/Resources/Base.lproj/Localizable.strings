@@ -102,3 +102,7 @@
 
 // The button
 "smartlook-consent-sdk-button" = "Confirm & continue";
+
+/* Custom events */
+"review-consent" = "Review Consent";
+"rendering-mode-changed" = "Rendering mode changed by user";

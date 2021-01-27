@@ -33,8 +33,6 @@ struct TownsListView: View {
                             .padding(0)
                     }
                 )
-                // TODO: Not working yet. Try find some solution.
-              //  .smartlookTrackEvent(name: "townSelected", params: ["name": town.name ?? ""], enabled: trackSelection)
             }
             .listStyle(PlainListStyle())
         }

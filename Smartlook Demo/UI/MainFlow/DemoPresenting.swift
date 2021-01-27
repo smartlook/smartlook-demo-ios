@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Smartlook
 
 protocol DemoPresenting: UIViewController {
     func showDemo(for item: DemoItem)
@@ -40,7 +41,18 @@ extension DemoPresenting {
                 configurableViewController.options = demoOptions
             }
 
-            present(viewController, animated: true, completion: nil)
+            // Our custom view controller identification
+            let viewControllerId = item.nameLocalized + " (\(item.id))"
+
+            // We can also track the execution of any navigation
+            // manually as in the following code
+            present(viewController, animated: true) {
+                // Track exit from transition
+                Smartlook.trackNavigationEvent(withControllerId: viewControllerId, type: .exit)
+            }
+
+            // Track enter to transition
+            Smartlook.trackNavigationEvent(withControllerId: viewControllerId, type: .enter)
         }
     }
 }

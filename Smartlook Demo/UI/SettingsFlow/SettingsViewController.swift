@@ -135,6 +135,9 @@ class SettingsViewController: UITableViewController {
                 // Stop analytics tools
                 Smartlook.stopRecording()
             }
+
+            // Track custom event about consent
+            Smartlook.trackCustomEvent(name: "review-consent".localized, props: ["source": "Settings"])
         }
     }
 

@@ -147,6 +147,10 @@ extension RenderingViewController: SelectionViewControllerDelegate {
     func didChangedItem(inSelection selection: String?, withValue value: Any, to state: Bool) {
         if let renderingMode = value as? Smartlook.RenderingMode {
             SettingsData.Rendering.currentMode = renderingMode
+
+            // Track custom event about changing the rendering mode
+            Smartlook.trackCustomEvent(name: "rendering-mode-changed".localized,
+                                       props: ["newMode": renderingMode.rawValue])
         }
 
         if let renderingModeOption = value as? Smartlook.RenderingModeOption {

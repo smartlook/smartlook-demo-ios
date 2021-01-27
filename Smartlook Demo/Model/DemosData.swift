@@ -113,8 +113,7 @@ struct DemosData {
         DemoItem(id: "towns-swiftui-demo", technology: "SwiftUI",
                  icon: UIImage(systemName: "swift"), iconColor: .systemBlue, storyboardName: "TownsSwiftUI",
                  detail: DemoDetail(options: [
-                    DemoOption(id: "map-sensitivity"),
-                    DemoOption(id: "track-town-selection")
+                    DemoOption(id: "map-sensitivity")
                  ])
         )
     ]
