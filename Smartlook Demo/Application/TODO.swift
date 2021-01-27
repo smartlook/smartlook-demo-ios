@@ -7,6 +7,5 @@
 //
 
 // TODO: Add tracking points to the main flow.
-// TODO: Solve application backgrounds and hovercraft graphics.
 // TODO: Go through the final code and add comments.
 // TODO: Final test.
