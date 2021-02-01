@@ -12,7 +12,7 @@ class TownsHostingController: UIHostingController<AnyView>, DemoConfigurability 
 
     // MARK: - Public
 
-    var options: [DemoOption] = [DemoOption]() {
+    var options = [DemoOption]() {
         didSet {
             demoOptions.items = options
         }

@@ -97,7 +97,7 @@ class SelectionViewController: UITableViewController {
     }
 
     private func markExclusivelyRow(at indexPath: IndexPath) {
-        for row in 0..<tableView.numberOfRows(inSection: indexPath.section) {
+        for row in 0 ..< tableView.numberOfRows(inSection: indexPath.section) {
             if let cell = tableView.cellForRow(at: IndexPath(row: row, section: indexPath.section)) {
                 let addCheckmark = row == indexPath.row
                 cell.accessoryType = addCheckmark ? .checkmark : .none

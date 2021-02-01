@@ -103,19 +103,21 @@ struct DemosData {
     // MARK: - Public
 
     static let all: [DemoItem] = [
-        DemoItem(id: "towns-demo", technology: "UIKit",
-                 icon: UIImage(systemName: "switch.2"), iconColor: .systemOrange, storyboardName: "Towns",
-                 detail: DemoDetail(options: [
-                    DemoOption(id: "map-sensitivity"),
-                    DemoOption(id: "track-town-selection")
-                 ])
+        DemoItem(
+            id: "towns-demo", technology: "UIKit",
+            icon: UIImage(systemName: "switch.2"), iconColor: .systemOrange, storyboardName: "Towns",
+            detail: DemoDetail(options: [
+                DemoOption(id: "map-sensitivity"),
+                DemoOption(id: "track-town-selection")
+            ])
         ),
 
-        DemoItem(id: "towns-swiftui-demo", technology: "SwiftUI",
-                 icon: UIImage(systemName: "swift"), iconColor: .systemBlue, storyboardName: "TownsSwiftUI",
-                 detail: DemoDetail(options: [
-                    DemoOption(id: "map-sensitivity")
-                 ])
+        DemoItem(
+            id: "towns-swiftui-demo", technology: "SwiftUI",
+            icon: UIImage(systemName: "swift"), iconColor: .systemBlue, storyboardName: "TownsSwiftUI",
+            detail: DemoDetail(options: [
+                DemoOption(id: "map-sensitivity")
+            ])
         )
     ]
 }

@@ -115,7 +115,7 @@ class MainViewController: UIViewController, DemoPresenting {
             let demoDetailViewController = navigationController.viewControllers.first as? DemoDetailViewController
         {
             demoDetailViewController.item = item
-            self.present(navigationController, animated: true, completion: nil)
+            present(navigationController, animated: true, completion: nil)
         }
     }
 
