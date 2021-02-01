@@ -164,7 +164,7 @@
                                                 </preferredSymbolConfiguration>
                                             </state>
                                             <connections>
-                                                <action selector="recordingButtonValueChangedWithSender:" destination="UFL-zJ-WkU" eventType="touchUpInside" id="cfv-pT-ao5"/>
+                                                <action selector="recordingButtonValueChanged:" destination="UFL-zJ-WkU" eventType="touchUpInside" id="bsq-f5-9Hk"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="749" text="Available demos" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P59-Mu-l4J">
