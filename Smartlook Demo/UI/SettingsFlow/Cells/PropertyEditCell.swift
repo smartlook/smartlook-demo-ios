@@ -35,8 +35,8 @@ class PropertyEditCell: UITableViewCell {
 
     // MARK: - Outlets
 
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var valueTextField: UITextField!
+    @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var valueTextField: UITextField!
 
 
     // MARK: - Public

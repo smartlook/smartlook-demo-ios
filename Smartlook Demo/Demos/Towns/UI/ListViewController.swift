@@ -5,8 +5,8 @@
 //  Copyright © 2020 Smartlook. All rights reserved.
 //
 
-import UIKit
 import Smartlook
+import UIKit
 
 class ListViewController: UITableViewController {
 

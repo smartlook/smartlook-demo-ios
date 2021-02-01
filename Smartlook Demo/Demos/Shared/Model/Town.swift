@@ -5,8 +5,8 @@
 //  Copyright © 2020 Smartlook. All rights reserved.
 //
 
-import UIKit
 import MapKit
+import UIKit
 
 struct Town: Equatable, Identifiable {
 
@@ -39,7 +39,6 @@ struct Town: Equatable, Identifiable {
 }
 
 extension CLLocationCoordinate2D: Equatable {
-
     static public func == (lhs: Self, rhs: Self) -> Bool {
         return lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
     }

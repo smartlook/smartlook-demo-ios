@@ -11,8 +11,8 @@ class TownCell: UITableViewCell {
 
     // MARK: - Outlets
 
-    @IBOutlet weak var flag: UIImageView!
-    @IBOutlet weak var name: UILabel!
+    @IBOutlet var flag: UIImageView!
+    @IBOutlet var name: UILabel!
 
 
     // MARK: - Initialization

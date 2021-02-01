@@ -16,8 +16,8 @@ class FlowDemoHeaderView: UICollectionReusableView {
 
     // MARK: - Outlets
 
-    @IBOutlet private weak var sdkStateLabel: UILabel!
-    @IBOutlet private weak var recordingButton: UIButton!
+    @IBOutlet private var sdkStateLabel: UILabel!
+    @IBOutlet private var recordingButton: UIButton!
 
 
     // MARK: - Public
@@ -51,7 +51,7 @@ class FlowDemoHeaderView: UICollectionReusableView {
 
     // MARK: - UI Actions
 
-    @IBAction private func recordingButtonValueChanged(sender: UIButton) {
+    @IBAction private func recordingButtonValueChanged(_: UIButton) {
         delegate?.recordingButtonPressed()
     }
 }

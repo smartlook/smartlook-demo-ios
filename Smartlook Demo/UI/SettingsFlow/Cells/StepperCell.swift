@@ -33,9 +33,9 @@ class StepperCell: UITableViewCell {
 
     // MARK: - Outlets
 
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var valueLabel: UILabel!
-    @IBOutlet private weak var valueStepper: UIStepper!
+    @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var valueLabel: UILabel!
+    @IBOutlet private var valueStepper: UIStepper!
 
 
     // MARK: - Public

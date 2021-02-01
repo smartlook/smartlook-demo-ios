@@ -63,6 +63,7 @@ struct DemoItem {
     var nameLocalized: String {
         "\(id)-name".localized
     }
+
     var perexLocalized: String {
         "\(id)-perex".localized
     }

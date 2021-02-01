@@ -12,12 +12,12 @@ class FlowDemoCell: UICollectionViewCell {
 
     // MARK: - Outlets
 
-    @IBOutlet private weak var nameLabel: UILabel!
-    @IBOutlet private weak var technologyLabel: UILabel!
-    @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private var nameLabel: UILabel!
+    @IBOutlet private var technologyLabel: UILabel!
+    @IBOutlet private var descriptionLabel: UILabel!
 
-    @IBOutlet private weak var iconImageView: UIImageView!
-    @IBOutlet private weak var iconBackgroundView: UIView!
+    @IBOutlet private var iconImageView: UIImageView!
+    @IBOutlet private var iconBackgroundView: UIView!
 
 
     // MARK: - Overrides

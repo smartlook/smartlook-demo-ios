@@ -16,7 +16,7 @@ class ValueEditViewController: UITableViewController {
 
     // MARK: - Outlets
 
-    @IBOutlet private weak var valueTextField: UITextField!
+    @IBOutlet private var valueTextField: UITextField!
 
 
     // MARK: - Public
@@ -45,7 +45,7 @@ class ValueEditViewController: UITableViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
-        if self.isMovingFromParent {
+        if isMovingFromParent {
             delegate?.didCloseValueEdit(value: value)
         }
     }

@@ -37,9 +37,9 @@ struct PropertiesData: Codable {
     // MARK: - PropertiesData update helpers
 
     static func updateProperties(from oldValue: PropertiesData, to newValue: PropertiesData,
-                                 delete: ((PropertyItem) -> Void), update: ((PropertyItem) -> Void)) {
+                                 delete: (PropertyItem) -> Void, update: (PropertyItem) -> Void) {
         // Remove deleted
-        oldValue.items.forEach { (property) in
+        oldValue.items.forEach { property in
             let deleted = newValue.items.filter {
                 $0.name == property.name
             }.isEmpty
@@ -50,7 +50,7 @@ struct PropertiesData: Codable {
         }
 
         // Update/set others
-        newValue.items.forEach { (property) in
+        newValue.items.forEach { property in
             update(property)
         }
     }

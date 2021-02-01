@@ -28,7 +28,7 @@ struct TownsListRowView: View {
 }
 
 struct TownsListRowView_Previews: PreviewProvider {
-    static var previewTown =  TownsData.all.first!
+    static var previewTown = TownsData.all.first!
 
     static var previews: some View {
         TownsListRowView(town: previewTown)

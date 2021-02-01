@@ -6,14 +6,14 @@
 //  Copyright © 2021 Smartlook. All rights reserved.
 //
 
-import SwiftUI
 import Smartlook
+import SwiftUI
 
 // MARK: - Sensitive modifier
 
 extension View {
     func smartlookSensitive(enabled: Bool = true) -> some View {
-        self.modifier(SmartlookSensitiveModifier(enabled: enabled))
+        modifier(SmartlookSensitiveModifier(enabled: enabled))
     }
 }
 
@@ -58,7 +58,7 @@ struct SmartlookSensitive<Content: View>: View {
 
 extension View {
     func smartlookTrackEvent(name: String, params: [String: String], enabled: Bool = true) -> some View {
-        self.modifier(SmartlookTrackEventModifier(eventName: name, params: params, enabled: enabled))
+        modifier(SmartlookTrackEventModifier(eventName: name, params: params, enabled: enabled))
     }
 
     func smartlookTrackEvent(name: String, param: String? = nil, enabled: Bool = true) -> some View {
@@ -67,7 +67,7 @@ extension View {
             params = ["value": param]
         }
 
-        return self.modifier(SmartlookTrackEventModifier(eventName: name, params: params, enabled: enabled))
+        return modifier(SmartlookTrackEventModifier(eventName: name, params: params, enabled: enabled))
     }
 }
 
@@ -77,10 +77,10 @@ struct SmartlookTrackEventModifier: ViewModifier {
     let enabled: Bool
 
     func body(content: Content) -> some View {
-        content.simultaneousGesture(TapGesture().onEnded({
+        content.simultaneousGesture(TapGesture().onEnded {
             if enabled {
-                 Smartlook.trackCustomEvent(name: eventName, props: params)
+                Smartlook.trackCustomEvent(name: eventName, props: params)
             }
-        }))
+        })
     }
 }

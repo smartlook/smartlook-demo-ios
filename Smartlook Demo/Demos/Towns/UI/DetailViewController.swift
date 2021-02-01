@@ -12,8 +12,8 @@ class DetailViewController: UIViewController {
 
     // MARK: - Outlets
 
-    @IBOutlet private weak var webView: WKWebView!
-    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet private var webView: WKWebView!
+    @IBOutlet private var activityIndicator: UIActivityIndicatorView!
 
 
     // MARK: - Public
@@ -37,7 +37,7 @@ class DetailViewController: UIViewController {
     // MARK: - Lifecycle
 
     override func viewWillAppear(_ animated: Bool) {
-        loadingObserver = webView.observe(\.isLoading, options: [.new]) { [unowned self] (object, _) in
+        loadingObserver = webView.observe(\.isLoading, options: [.new]) { [unowned self] object, _ in
             if object == self.webView {
                 if self.webView.isLoading {
                     self.activityIndicator.startAnimating()
@@ -45,7 +45,7 @@ class DetailViewController: UIViewController {
                     self.activityIndicator.stopAnimating()
                 }
             }
-         }
+        }
 
         configureView()
     }

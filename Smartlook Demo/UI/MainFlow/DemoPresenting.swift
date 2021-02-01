@@ -6,8 +6,8 @@
 //  Copyright © 2021 Smartlook. All rights reserved.
 //
 
-import UIKit
 import Smartlook
+import UIKit
 
 protocol DemoPresenting: UIViewController {
     func showDemo(for item: DemoItem)

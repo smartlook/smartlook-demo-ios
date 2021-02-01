@@ -54,6 +54,7 @@ struct SettingsData {
                 SettingsData.updateConfiguration()
             }
         }
+
         /// Determines if Smartlook adapts its recording framerate to the frequency of UI changes.
         static var useAdaptiveFramerate: Bool = true {
             didSet {
@@ -137,10 +138,11 @@ struct SettingsData {
         /// Data for session properties. These additional custom properties will be added to each recording session.
         static var sessionProperties = PropertiesData(id: "sessionProperties") {
             didSet {
-                PropertiesData.updateProperties(from: oldValue, to: sessionProperties,
-                    delete: { (property) in
+                PropertiesData.updateProperties(
+                    from: oldValue, to: sessionProperties,
+                    delete: { property in
                         Smartlook.removeSessionProperty(forName: property.name)
-                    }, update: { (property) in
+                    }, update: { property in
                         Smartlook.setSessionProperty(value: property.name, forName: property.value)
                     }
                 )
@@ -191,10 +193,11 @@ struct SettingsData {
         /// Data for global event properties. These additional properties will be to attached to every event.
         static var globalProperties = PropertiesData(id: "globalProperties") {
             didSet {
-                PropertiesData.updateProperties(from: oldValue, to: globalProperties,
-                    delete: { (property) in
+                PropertiesData.updateProperties(
+                    from: oldValue, to: globalProperties,
+                    delete: { property in
                         Smartlook.removeGlobalEventProperty(forName: property.name)
-                    }, update: { (property) in
+                    }, update: { property in
                         Smartlook.setGlobalEventProperty(value: property.name, forName: property.value)
                     }
                 )

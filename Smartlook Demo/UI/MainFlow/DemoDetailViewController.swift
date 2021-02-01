@@ -34,7 +34,7 @@ class DemoDetailViewController: UITableViewController, DemoPresenting {
     // MARK: - View setup
 
     private func configureView() {
-        let backgroundImage = UIImage.init(named: "mainBackground")
+        let backgroundImage = UIImage(named: "mainBackground")
         let imageView = UIImageView(image: backgroundImage)
         imageView.contentMode = .topLeft
         imageView.alpha = 0.25

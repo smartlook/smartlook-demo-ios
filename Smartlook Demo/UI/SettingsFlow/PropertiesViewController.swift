@@ -32,11 +32,11 @@ class PropertiesViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        self.navigationController?.setToolbarHidden(false, animated: true)
+        navigationController?.setToolbarHidden(false, animated: true)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.setToolbarHidden(true, animated: true)
+        navigationController?.setToolbarHidden(true, animated: true)
 
         super.viewWillDisappear(animated)
     }
@@ -58,7 +58,8 @@ class PropertiesViewController: UITableViewController {
             case "ShowEditProperty":
                 if
                     let index = tableView.indexPathForSelectedRow?.row,
-                    index < properties.items.count {
+                    index < properties.items.count
+                {
                     propertyEditViewController.property = properties.items[index]
                 }
                 propertyEditViewController.title = "edit-property".localized

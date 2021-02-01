@@ -5,9 +5,9 @@
 //  Copyright © 2020 Smartlook. All rights reserved.
 //
 
-import UIKit
 import Smartlook
 import SmartlookConsentSDK
+import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

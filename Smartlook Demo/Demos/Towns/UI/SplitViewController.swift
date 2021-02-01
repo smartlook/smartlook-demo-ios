@@ -12,7 +12,7 @@ class SplitViewController: UISplitViewController, DemoConfigurability {
 
     // MARK: - Public
 
-    var options: [DemoOption] = [DemoOption]()
+    var options = [DemoOption]()
 
 
     // MARK: - Lifecycle
@@ -20,13 +20,15 @@ class SplitViewController: UISplitViewController, DemoConfigurability {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        guard let listNavigationController = self.viewControllers.first as? UINavigationController,
-              let listController = listNavigationController.topViewController as? ListViewController else {
+        guard let listNavigationController = viewControllers.first as? UINavigationController,
+              let listController = listNavigationController.topViewController as? ListViewController
+        else {
             return
         }
 
-        guard let navigationController = self.viewControllers.last as? UINavigationController,
-            let detailViewController = navigationController.topViewController as? DetailViewController else {
+        guard let navigationController = viewControllers.last as? UINavigationController,
+              let detailViewController = navigationController.topViewController as? DetailViewController
+        else {
             return
         }
 
@@ -40,7 +42,7 @@ class SplitViewController: UISplitViewController, DemoConfigurability {
         detailViewController.isMapSensitive = isMapSensitive ?? false
 
         // Add the display mode button to the navigation bar
-        detailViewController.navigationItem.leftBarButtonItem = self.displayModeButtonItem
+        detailViewController.navigationItem.leftBarButtonItem = displayModeButtonItem
         detailViewController.navigationItem.leftItemsSupplementBackButton = true
     }
 }
@@ -55,7 +57,8 @@ extension SplitViewController: UISplitViewControllerDelegate {
                              onto primaryViewController: UIViewController) -> Bool {
 
         guard let navigationController = secondaryViewController as? UINavigationController,
-            let detailViewController = navigationController.topViewController as? DetailViewController else {
+              let detailViewController = navigationController.topViewController as? DetailViewController
+        else {
             // Fallback to the default
             return false
         }

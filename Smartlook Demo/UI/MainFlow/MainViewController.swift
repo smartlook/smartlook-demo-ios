@@ -13,8 +13,8 @@ class MainViewController: UIViewController, DemoPresenting {
 
     // MARK: - Outlets
 
-    @IBOutlet private weak var collectionView: UICollectionView!
-    @IBOutlet private weak var shareButton: UIBarButtonItem!
+    @IBOutlet private var collectionView: UICollectionView!
+    @IBOutlet private var shareButton: UIBarButtonItem!
 
 
     // MARK: - Private
@@ -33,7 +33,7 @@ class MainViewController: UIViewController, DemoPresenting {
         // or `SmartlookConsentSDK.show` callbacks may be usefully eg.,
         // if some UI depends on the consents state like here.
         let notificationName = SmartlookConsentSDK.consentsTouchedNotification
-        _ = NotificationCenter.default.addObserver(forName: notificationName, object: nil, queue: nil) { (_) in
+        _ = NotificationCenter.default.addObserver(forName: notificationName, object: nil, queue: nil) { _ in
             // Updates recording state in header
             self.collectionView.reloadData()
         }
@@ -45,7 +45,7 @@ class MainViewController: UIViewController, DemoPresenting {
     // MARK: - View setup
 
     func configureView() {
-        let backgroundImage = UIImage.init(named: "mainBackground")
+        let backgroundImage = UIImage(named: "mainBackground")
         let imageView = UIImageView(image: backgroundImage)
         imageView.contentMode = .topLeft
         collectionView.backgroundView = imageView
@@ -135,7 +135,7 @@ class MainViewController: UIViewController, DemoPresenting {
 
     // MARK: - UI Actions
 
-    @IBAction private func shareButtonAction(_ sender: UIBarButtonItem) {
+    @IBAction private func shareButtonAction(_: UIBarButtonItem) {
         guard let dashboardSessionUrl = Smartlook.getDashboardSessionURL(withCurrentTimestamp: false) else {
             return
         }
@@ -146,7 +146,7 @@ class MainViewController: UIViewController, DemoPresenting {
         activityViewController.popoverPresentationController?.barButtonItem = shareButton
 
         // Present system share controller
-        self.present(activityViewController, animated: true)
+        present(activityViewController, animated: true)
     }
 }
 

@@ -430,6 +430,7 @@
 				8F2F18AA25593CF800CC128C /* Frameworks */,
 				8F2F18AB25593CF800CC128C /* Resources */,
 				8F81C684255D6482000976C0 /* SwiftLint */,
+				8FF3407D25C80CB400907416 /* SwiftFormatter */,
 				8FA4782925B871D40060A186 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -517,6 +518,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nfi\n";
+		};
+		8FF3407D25C80CB400907416 /* SwiftFormatter */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftFormatter;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftformat >/dev/null; then\n  swiftformat . --lint  --lenient --indent 4 --commas inline --swiftversion 5 --disable consecutiveBlankLines, braces --stripunusedargs closure-only \nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

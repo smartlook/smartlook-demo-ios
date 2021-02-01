@@ -6,8 +6,8 @@
 //  Copyright © 2021 Smartlook. All rights reserved.
 //
 
-import SwiftUI
 import MapKit
+import SwiftUI
 
 struct TownsMapView: View {
     var town: Town?

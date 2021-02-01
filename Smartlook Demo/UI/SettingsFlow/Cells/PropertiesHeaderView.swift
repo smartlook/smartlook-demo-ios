@@ -12,7 +12,7 @@ final class PropertiesHeaderView: UITableViewHeaderFooterView {
 
     // MARK: - Static constants
 
-    static let reuseIdentifier: String = String(describing: self)
+    static let reuseIdentifier = String(describing: self)
 
 
     // MARK: - Public

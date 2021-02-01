@@ -12,11 +12,11 @@ class RenderingViewController: UITableViewController {
 
     // MARK: - Outlets
 
-    @IBOutlet private weak var modeCell: UITableViewCell!
-    @IBOutlet private weak var optionCell: UITableViewCell!
+    @IBOutlet private var modeCell: UITableViewCell!
+    @IBOutlet private var optionCell: UITableViewCell!
 
-    @IBOutlet private weak var adaptiveFramerateCell: SwitchCell!
-    @IBOutlet private weak var framerateCell: StepperCell!
+    @IBOutlet private var adaptiveFramerateCell: SwitchCell!
+    @IBOutlet private var framerateCell: StepperCell!
 
 
     // MARK: - Lifecycle
@@ -136,7 +136,7 @@ class RenderingViewController: UITableViewController {
         let alert = UIAlertController(title: title.localized, message: message.localized, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "button-ok".localized, style: .default, handler: nil))
 
-        self.present(alert, animated: true)
+        present(alert, animated: true)
     }
 }
 

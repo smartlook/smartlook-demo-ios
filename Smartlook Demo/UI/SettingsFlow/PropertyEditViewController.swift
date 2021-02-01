@@ -16,7 +16,7 @@ class PropertyEditViewController: UITableViewController {
 
     // MARK: - Static constants
 
-    private struct Identifiers {
+    private enum Identifiers {
         static let name = "name"
         static let value = "value"
     }
@@ -24,10 +24,10 @@ class PropertyEditViewController: UITableViewController {
 
     // MARK: - Outlets
 
-    @IBOutlet private weak var saveButton: UIBarButtonItem!
+    @IBOutlet private var saveButton: UIBarButtonItem!
 
-    @IBOutlet private weak var nameCell: PropertyEditCell!
-    @IBOutlet private weak var valueCell: PropertyEditCell!
+    @IBOutlet private var nameCell: PropertyEditCell!
+    @IBOutlet private var valueCell: PropertyEditCell!
 
 
     // MARK: - Public

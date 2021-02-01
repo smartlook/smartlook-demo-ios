@@ -36,7 +36,7 @@ struct WebView: UIViewRepresentable {
         var parent: WebView
 
         init(_ uiWebView: WebView) {
-            self.parent = uiWebView
+            parent = uiWebView
         }
 
 

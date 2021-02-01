@@ -100,7 +100,7 @@ class AppSettingsManager {
 
     private func appSettingsSelectionData<T: Codable>(from selectionData: SelectionData) -> AppSettingsSelectionData<T> {
         var appSettingsSelectionData = AppSettingsSelectionData<T>(id: selectionData.id, items: [AppSettingsSelectionItem<T>]())
-        selectionData.items.forEach { (item) in
+        selectionData.items.forEach { item in
             if let value = item.value as? T {
                 appSettingsSelectionData.items.append(
                     AppSettingsSelectionItem(label: item.label, value: value, selected: item.selected)
@@ -113,7 +113,7 @@ class AppSettingsManager {
 
     private func selectionData<T: Any>(from appSettingsSelectionData: AppSettingsSelectionData<T>) -> SelectionData {
         var selectionData = SelectionData(id: appSettingsSelectionData.id, items: [SelectionItem]())
-        appSettingsSelectionData.items.forEach { (item) in
+        appSettingsSelectionData.items.forEach { item in
             selectionData.items.append(
                 SelectionItem(label: item.label, value: item.value, selected: item.selected)
             )
@@ -126,7 +126,7 @@ class AppSettingsManager {
 
 extension UserDefaults {
 
-    struct Key {
+    enum Key {
         static let applicationSettingsStorage = "applicationSettingsStorage"
     }
 

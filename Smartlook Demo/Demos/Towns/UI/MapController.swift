@@ -5,16 +5,16 @@
 //  Copyright © 2020 Smartlook. All rights reserved.
 //
 
-import UIKit
 import MapKit
+import UIKit
 
 class MapController: UIViewController {
 
     // MARK: - Outlets
 
-    @IBOutlet private weak var navigationBar: UINavigationBar!
-    @IBOutlet private weak var navigationBarTitle: UINavigationItem!
-    @IBOutlet private weak var mapView: MKMapView!
+    @IBOutlet private var navigationBar: UINavigationBar!
+    @IBOutlet private var navigationBarTitle: UINavigationItem!
+    @IBOutlet private var mapView: MKMapView!
 
 
     // MARK: - Public
@@ -28,7 +28,7 @@ class MapController: UIViewController {
         super.viewDidLoad()
 
         // Insert all annotations
-        TownsData.all.forEach { (town) in
+        TownsData.all.forEach { town in
             mapView.addAnnotation(TownPin(with: town))
         }
 
@@ -38,7 +38,7 @@ class MapController: UIViewController {
             span: MKCoordinateSpan(latitudeDelta: 2.5, longitudeDelta: 8.5)
         )
         mapView.slSensitive = true
-        self.view.slSensitive = true
+        view.slSensitive = true
     }
 
 

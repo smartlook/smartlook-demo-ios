@@ -14,6 +14,7 @@ struct TownsDetailView: View {
             isLoading = true
         }
     }
+
     @State private var showingDetail = false
     @State private var isLoading = true
 
@@ -28,12 +29,15 @@ struct TownsDetailView: View {
         }
         .navigationTitle(town?.name ?? "")
         .navigationBarTitleDisplayMode(.inline)
-        .navigationBarItems(trailing: Button(
-            action: {
-                showingDetail.toggle()
-            }, label: {
-                Text("Map").fontWeight(.regular)
-            }).sheet(isPresented: $showingDetail, content: {
+        .navigationBarItems(
+            trailing: Button(
+                action: {
+                    showingDetail.toggle()
+                }, label: {
+                    Text("Map").fontWeight(.regular)
+                }
+            )
+            .sheet(isPresented: $showingDetail, content: {
                 TownsMapView(town: town, showing: $showingDetail)
             })
         )

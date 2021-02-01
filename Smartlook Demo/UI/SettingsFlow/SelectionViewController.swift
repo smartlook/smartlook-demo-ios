@@ -59,7 +59,7 @@ class SelectionViewController: UITableViewController {
         }
 
         let item = selectionData.items[indexPath.row]
-        if allowMultipleSelection == false && item.selected {
+        if allowMultipleSelection == false, item.selected {
             tableView.deselectRow(at: indexPath, animated: true)
             return
         }
@@ -90,7 +90,7 @@ class SelectionViewController: UITableViewController {
 
     private func deselectAllRows() {
         if let selectedIndexPaths = tableView.indexPathsForSelectedRows {
-            selectedIndexPaths.forEach { (selectedPath) in
+            selectedIndexPaths.forEach { selectedPath in
                 tableView.deselectRow(at: selectedPath, animated: true)
             }
         }

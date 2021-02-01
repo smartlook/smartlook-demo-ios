@@ -21,32 +21,32 @@ struct SearchBarView: View {
                 TextField("Search", text: $text, onEditingChanged: { _ in
                     isEditing = true
                 }, onCommit: onCommit)
-                .padding(8)
-                .padding(.leading, 24)
-                .background(Color(.tertiarySystemFill))
-                .cornerRadius(8)
-                .overlay(
-                    HStack {
-                        Image(systemName: "magnifyingglass")
-                            .padding(.leading, 7)
+                    .padding(8)
+                    .padding(.leading, 24)
+                    .background(Color(.tertiarySystemFill))
+                    .cornerRadius(8)
+                    .overlay(
+                        HStack {
+                            Image(systemName: "magnifyingglass")
+                                .padding(.leading, 7)
 
-                        Spacer()
+                            Spacer()
 
-                        if isEditing {
-                            Button(action: {
-                                text = ""
-                            }, label: {
-                                Image(systemName: "xmark.circle.fill")
-                                    .opacity(text == "" ? 0 : 1)
-                                    .padding(.trailing, 8)
-                            })
+                            if isEditing {
+                                Button(action: {
+                                    text = ""
+                                }, label: {
+                                    Image(systemName: "xmark.circle.fill")
+                                        .opacity(text == "" ? 0 : 1)
+                                        .padding(.trailing, 8)
+                                })
+                            }
                         }
+                        .foregroundColor(.secondary)
+                    )
+                    .onTapGesture {
+                        isEditing = true
                     }
-                    .foregroundColor(.secondary)
-                )
-                .onTapGesture {
-                    isEditing = true
-                }
 
                 if isEditing {
                     Button("Cancel") {

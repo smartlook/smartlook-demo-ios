@@ -33,8 +33,8 @@ class SwitchCell: UITableViewCell {
 
     // MARK: - Outlets
 
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var valueSwitch: UISwitch!
+    @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var valueSwitch: UISwitch!
 
 
     // MARK: - Public

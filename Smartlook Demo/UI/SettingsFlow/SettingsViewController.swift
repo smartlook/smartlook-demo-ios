@@ -13,14 +13,14 @@ class SettingsViewController: UITableViewController {
 
     // MARK: - Outlets
 
-    @IBOutlet private weak var renderingCell: UITableViewCell!
+    @IBOutlet private var renderingCell: UITableViewCell!
 
-    @IBOutlet private weak var denyListCell: UITableViewCell!
-    @IBOutlet private weak var userIdentificationCell: UITableViewCell!
-    @IBOutlet private weak var sessionPropertiesCell: UITableViewCell!
+    @IBOutlet private var denyListCell: UITableViewCell!
+    @IBOutlet private var userIdentificationCell: UITableViewCell!
+    @IBOutlet private var sessionPropertiesCell: UITableViewCell!
 
-    @IBOutlet private weak var eventTrackingCell: UITableViewCell!
-    @IBOutlet private weak var globalPropertiesCell: UITableViewCell!
+    @IBOutlet private var eventTrackingCell: UITableViewCell!
+    @IBOutlet private var globalPropertiesCell: UITableViewCell!
 
 
     // MARK: - Lifecycle

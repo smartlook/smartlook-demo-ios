@@ -45,14 +45,8 @@ struct AppSettings: Codable {
 }
 
 
-extension Smartlook.RenderingMode: Codable {
+extension Smartlook.RenderingMode: Codable {}
 
-}
+extension Smartlook.RenderingModeOption: Codable {}
 
-extension Smartlook.RenderingModeOption: Codable {
-
-}
-
-extension Smartlook.EventTrackingMode: Codable {
-
-}
+extension Smartlook.EventTrackingMode: Codable {}
