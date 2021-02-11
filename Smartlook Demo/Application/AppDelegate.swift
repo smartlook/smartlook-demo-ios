@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppSettingsManager().sync()
 
         // Smartlook SDK
-        let smartlookConfig = Smartlook.SetupConfiguration(key: smartlookApiKey)
+        let smartlookConfig = Smartlook.SetupConfiguration(key: SettingsData.smartlookApiKey ?? "")
         Smartlook.setup(configuration: smartlookConfig)
 
         // Smartlook Consent SDK
