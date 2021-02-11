@@ -37,8 +37,6 @@ class MapController: UIViewController {
             center: CLLocationCoordinate2DMake(49.7437000, 15.3391333),
             span: MKCoordinateSpan(latitudeDelta: 2.5, longitudeDelta: 8.5)
         )
-        mapView.slSensitive = true
-        view.slSensitive = true
     }
 
 

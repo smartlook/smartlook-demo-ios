@@ -27,7 +27,16 @@ class FlowDemoHeaderView: UICollectionReusableView {
 
     // MARK: - View setup
 
-    public func setupContent(recording: Bool, consent: Bool) {
+    public func setupContent(recording: Bool, consent: Bool, key: Bool) {
+        guard key else {
+            let buttonImage = UIImage(systemName: "key.fill")
+            recordingButton.setImage(buttonImage, for: .normal)
+            recordingButton.imageView?.tintColor = .systemRed
+            sdkStateLabel.text = "apiKey-issue".localized
+
+            return
+        }
+
         guard consent else {
             let buttonImage = UIImage(systemName: "person.circle")
             recordingButton.setImage(buttonImage, for: .normal)

@@ -8,6 +8,7 @@
 
 import Foundation
 import Smartlook
+import SmartlookConsentSDK
 
 class AppSettingsManager {
 
@@ -17,6 +18,7 @@ class AppSettingsManager {
         // Loads last settings state from storage and apply to SDK
         if let appSettings = load() {
             updateSettingsData(with: appSettings)
+            SettingsData.updateConfiguration()
 
             return
         }
@@ -26,10 +28,39 @@ class AppSettingsManager {
         if Smartlook.isRecording() {
             save()
         } else {
-            Smartlook.startRecording()
+            if SettingsData.isApiKeyValid {
+                Smartlook.startRecording()
+            }
+
             save()
             Smartlook.stopRecording()
         }
+    }
+
+    func sync(withNewApiKey apiKey: String?) {
+        // Update stored Api key
+        SettingsData.smartlookApiKey = apiKey
+        SettingsData.updateConfiguration()
+
+        // Store last settings
+        AppSettingsManager().save()
+
+        let isApiKeyValid = SettingsData.isApiKeyValid
+        if Smartlook.isRecording() {
+            // If key is invalid now, we will stop recording
+            if !isApiKeyValid {
+                Smartlook.stopRecording()
+            }
+        } else {
+            // If key is valid and we have consent, we run recording
+            if isApiKeyValid, SmartlookConsentSDK.consentState(for: .privacy) == .provided {
+                Smartlook.startRecording()
+            }
+        }
+
+        // Notify about this configuration change
+        let notificationName = SettingsData.smartlookSettingsUpdatedNotification
+        NotificationCenter.default.post(name: notificationName, object: nil)
     }
 
 
@@ -65,8 +96,6 @@ class AppSettingsManager {
 
             renderingMode: SettingsData.Rendering.currentMode,
             renderingModeOption: SettingsData.Rendering.currentModeOption,
-            framerate: SettingsData.Rendering.framerate,
-            useAdaptiveFramerate: SettingsData.Rendering.useAdaptiveFramerate,
 
             denyList: appSettingsSelectionData(from: SettingsData.Privacy.denyList),
             userIdentifier: SettingsData.Privacy.userIdentifier,
@@ -78,14 +107,12 @@ class AppSettingsManager {
     }
 
     private func updateSettingsData(with appSettings: AppSettings) {
-        if SettingsData.smartlookApiKey.isEmpty {
-            SettingsData.smartlookApiKey = appSettings.smartlookApiKey ?? ""
+        if let smartlookApiKey = appSettings.smartlookApiKey, !smartlookApiKey.isEmpty {
+            SettingsData.smartlookApiKey = appSettings.smartlookApiKey
         }
 
         SettingsData.Rendering.currentMode = appSettings.renderingMode
         SettingsData.Rendering.currentModeOption = appSettings.renderingModeOption
-        SettingsData.Rendering.framerate = appSettings.framerate
-        SettingsData.Rendering.useAdaptiveFramerate = appSettings.useAdaptiveFramerate
 
         SettingsData.Privacy.denyList = selectionData(from: appSettings.denyList)
         SettingsData.Privacy.userIdentifier = appSettings.userIdentifier

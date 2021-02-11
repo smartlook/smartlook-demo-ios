@@ -14,12 +14,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Private
 
-    private let smartlookApiKey = "a76b285a70ecfb2b2cc13a13b0be2de6b60acf99"
+    // TODO: Insert your project SDK Key to this place!
+    /// It is used as an initialization api key. If set, the application
+    /// does not require the setting of the api key. The key defined in
+    /// this way can also be changed in the application settings.
+    private let smartlookApiKey = ""
 
 
     // MARK: - UIApplication lifecycle
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Reuse apiKey for settings dialog
+        SettingsData.smartlookApiKey = smartlookApiKey
+        AppSettingsManager().sync()
+
         // Smartlook SDK
         let smartlookConfig = Smartlook.SetupConfiguration(key: smartlookApiKey)
         Smartlook.setup(configuration: smartlookConfig)
@@ -30,14 +38,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         consentsSettingsDefaults.append((.analytics, .provided))
 
         SmartlookConsentSDK.check(with: consentsSettingsDefaults) {
-            if SmartlookConsentSDK.consentState(for: .privacy) == .provided {
+            if
+                SmartlookConsentSDK.consentState(for: .privacy) == .provided,
+                SettingsData.isApiKeyValid
+            {
                 Smartlook.startRecording()
             }
         }
-
-        // Reuse apiKey for settings dialog
-        SettingsData.smartlookApiKey = smartlookApiKey
-        AppSettingsManager().sync()
 
         return true
     }

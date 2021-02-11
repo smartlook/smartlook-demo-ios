@@ -22,6 +22,8 @@ class SettingsViewController: UITableViewController {
     @IBOutlet private var eventTrackingCell: UITableViewCell!
     @IBOutlet private var globalPropertiesCell: UITableViewCell!
 
+    @IBOutlet private var sdkKeyCell: UITableViewCell!
+
 
     // MARK: - Lifecycle
 
@@ -57,6 +59,10 @@ class SettingsViewController: UITableViewController {
 
         let globalPropertiesCount = SettingsData.Analytics.globalProperties.items.count
         globalPropertiesCell.detailTextLabel?.text = "\(globalPropertiesCount)"
+
+        // Smartlook SDK
+        let apiKey = SettingsData.smartlookApiKey ?? "none".localized
+        sdkKeyCell.detailTextLabel?.text = apiKey
     }
 
 
@@ -78,45 +84,73 @@ class SettingsViewController: UITableViewController {
         super.prepare(for: segue, sender: sender)
 
         if let selectionViewController = segue.destination as? SelectionViewController {
-            selectionViewController.delegate = self
-            selectionViewController.allowMultipleSelection = true
-
-            // Fills options for current selection
-            switch segue.identifier ?? "" {
-            case "ShowDenyList":
-                selectionViewController.selectionData = SettingsData.Privacy.denyList
-                selectionViewController.title = "settings-deny-list".localized
-
-            case "ShowEventTrackingModes":
-                selectionViewController.selectionData = SettingsData.Analytics.eventTrackingModeItems
-                selectionViewController.title = "settings-event-tracking".localized
-
-            default:
-                break
-            }
+            prepare(for: segue, selectionViewController: selectionViewController)
         }
 
         if let propertiesViewController = segue.destination as? PropertiesViewController {
-            propertiesViewController.delegate = self
-
-            // Fills properties for corresponding section
-            switch segue.identifier ?? "" {
-            case "ShowSessionProperties":
-                propertiesViewController.properties = SettingsData.Privacy.sessionProperties
-                propertiesViewController.title = "session-properties".localized
-
-            case "ShowGlobalProperties":
-                propertiesViewController.properties = SettingsData.Analytics.globalProperties
-                propertiesViewController.title = "global-properties".localized
-
-            default:
-                break
-            }
+            prepare(for: segue, propertiesViewController: propertiesViewController)
         }
 
         if let valueEditViewController = segue.destination as? ValueEditViewController {
-            valueEditViewController.delegate = self
+            prepare(for: segue, valueEditViewController: valueEditViewController)
+        }
+    }
+
+    private func prepare(for segue: UIStoryboardSegue, selectionViewController: SelectionViewController) {
+        selectionViewController.delegate = self
+        selectionViewController.allowMultipleSelection = true
+
+        // Fills options for current selection
+        switch segue.identifier ?? "" {
+        case "ShowDenyList":
+            selectionViewController.selectionData = SettingsData.Privacy.denyList
+            selectionViewController.title = "settings-deny-list".localized
+
+        case "ShowEventTrackingModes":
+            selectionViewController.selectionData = SettingsData.Analytics.eventTrackingModeItems
+            selectionViewController.title = "settings-event-tracking".localized
+
+        default:
+            break
+        }
+    }
+
+    private func prepare(for segue: UIStoryboardSegue, propertiesViewController: PropertiesViewController) {
+        propertiesViewController.delegate = self
+
+        // Fills properties for corresponding section
+        switch segue.identifier ?? "" {
+        case "ShowSessionProperties":
+            propertiesViewController.properties = SettingsData.Privacy.sessionProperties
+            propertiesViewController.title = "session-properties".localized
+
+        case "ShowGlobalProperties":
+            propertiesViewController.properties = SettingsData.Analytics.globalProperties
+            propertiesViewController.title = "global-properties".localized
+
+        default:
+            break
+        }
+    }
+
+    fileprivate func prepare(for segue: UIStoryboardSegue, valueEditViewController: ValueEditViewController) {
+        valueEditViewController.delegate = self
+
+        switch segue.identifier ?? "" {
+        case "ShowUserIdentification":
+            valueEditViewController.id = "userIdentification"
             valueEditViewController.value = SettingsData.Privacy.userIdentifier
+            valueEditViewController.title = "userIdentification".localized
+            valueEditViewController.footerTitle = "userIdentificationFooter".localized
+
+        case "ShowApiKey":
+            valueEditViewController.id = "apiKey"
+            valueEditViewController.value = SettingsData.smartlookApiKey
+            valueEditViewController.title = "sdkKey".localized
+            valueEditViewController.footerTitle = "sdkKeyFooter".localized
+
+        default:
+            break
         }
     }
 
@@ -146,7 +180,7 @@ class SettingsViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Consent row
-        if indexPath.section == 3 {
+        if indexPath.section == 4 {
             tableView.deselectRow(at: indexPath, animated: false)
             reviewConsents()
         }
@@ -199,8 +233,17 @@ extension SettingsViewController: ValueEditViewControllerDelegate {
 
     // MARK: - ValueEditViewControllerDelegate methods
 
-    func didCloseValueEdit(value: String?) {
-        SettingsData.Privacy.userIdentifier = value
+    func didCloseValueEdit(id: String?, value: String?) {
+        switch id ?? "" {
+        case "userIdentification":
+            SettingsData.Privacy.userIdentifier = value
+
+        case "apiKey":
+            AppSettingsManager().sync(withNewApiKey: value)
+
+        default:
+            break
+        }
     }
 }
 

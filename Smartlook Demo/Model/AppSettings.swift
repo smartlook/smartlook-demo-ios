@@ -33,8 +33,6 @@ struct AppSettings: Codable {
 
     let renderingMode: Smartlook.RenderingMode
     let renderingModeOption: Smartlook.RenderingModeOption?
-    let framerate: Int
-    let useAdaptiveFramerate: Bool
 
     let denyList: AppSettingsSelectionData<String>
     let userIdentifier: String?

@@ -19,7 +19,6 @@
 		8F2F18B525593CF800CC128C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F18B425593CF800CC128C /* ListViewController.swift */; };
 		8F2F18B825593CF800CC128C /* Towns.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2F18B625593CF800CC128C /* Towns.storyboard */; };
 		8F2F18BA25593CF900CC128C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F2F18B925593CF900CC128C /* Assets.xcassets */; };
-		8F2F18BD25593CF900CC128C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2F18BB25593CF900CC128C /* LaunchScreen.storyboard */; };
 		8F2F18CE2559425D00CC128C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F18CD2559425D00CC128C /* DetailViewController.swift */; };
 		8F2F18D22559435E00CC128C /* Town.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F18D12559435E00CC128C /* Town.swift */; };
 		8F2F18D6255944CD00CC128C /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F18D5255944CD00CC128C /* MapController.swift */; };
@@ -31,11 +30,11 @@
 		8F4AEFBC259C6AEA0064A37A /* TownsSwiftUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F4AEFBB259C6AEA0064A37A /* TownsSwiftUI.storyboard */; };
 		8F4AEFC0259C6FBD0064A37A /* TownsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4AEFBF259C6FBD0064A37A /* TownsListView.swift */; };
 		8F535D382588B17300B76FC1 /* DemosData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F535D372588B17300B76FC1 /* DemosData.swift */; };
+		8F53639125D42B2100825568 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F53639025D42B2100825568 /* LaunchScreen.storyboard */; };
 		8F55CA8C257E376E00EBDA3E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F55CA8B257E376E00EBDA3E /* Settings.storyboard */; };
+		8F57B72C25D2A50100570A2F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57B72B25D2A50000570A2F /* OnboardingViewController.swift */; };
 		8F6A43A025B5D6FC00E50034 /* SmartlookConsentSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 8F6A439F25B5D6FC00E50034 /* SmartlookConsentSDK */; };
 		8F6A43A525B5E26E00E50034 /* TownsDemoOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A43A425B5E26E00E50034 /* TownsDemoOptions.swift */; };
-		8F6C7BE2258CF4E60024795E /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6C7BE1258CF4E60024795E /* SwitchCell.swift */; };
-		8F6C7BE5258CF5060024795E /* StepperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6C7BE4258CF5060024795E /* StepperCell.swift */; };
 		8F76A59925A31B1100EE723C /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76A59825A31B1100EE723C /* WebView.swift */; };
 		8F76A59C25A31D4E00EE723C /* TownsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76A59B25A31D4E00EE723C /* TownsDetailView.swift */; };
 		8F76A59F25A3242300EE723C /* TownsMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F76A59E25A3242300EE723C /* TownsMapView.swift */; };
@@ -90,7 +89,6 @@
 		8F2F18B425593CF800CC128C /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		8F2F18B725593CF800CC128C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Towns.storyboard; sourceTree = "<group>"; };
 		8F2F18B925593CF900CC128C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8F2F18BC25593CF900CC128C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F2F18BE25593CF900CC128C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F2F18CD2559425D00CC128C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8F2F18D12559435E00CC128C /* Town.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Town.swift; sourceTree = "<group>"; };
@@ -103,10 +101,10 @@
 		8F4AEFBB259C6AEA0064A37A /* TownsSwiftUI.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TownsSwiftUI.storyboard; sourceTree = "<group>"; };
 		8F4AEFBF259C6FBD0064A37A /* TownsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownsListView.swift; sourceTree = "<group>"; };
 		8F535D372588B17300B76FC1 /* DemosData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemosData.swift; sourceTree = "<group>"; };
+		8F53639025D42B2100825568 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F55CA8B257E376E00EBDA3E /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		8F57B72B25D2A50000570A2F /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		8F6A43A425B5E26E00E50034 /* TownsDemoOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownsDemoOptions.swift; sourceTree = "<group>"; };
-		8F6C7BE1258CF4E60024795E /* SwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
-		8F6C7BE4258CF5060024795E /* StepperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperCell.swift; sourceTree = "<group>"; };
 		8F76A59825A31B1100EE723C /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		8F76A59B25A31D4E00EE723C /* TownsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownsDetailView.swift; sourceTree = "<group>"; };
 		8F76A59E25A3242300EE723C /* TownsMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownsMapView.swift; sourceTree = "<group>"; };
@@ -232,9 +230,9 @@
 		8F2F18C925593E9C00CC128C /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				8F2F18BB25593CF900CC128C /* LaunchScreen.storyboard */,
 				8FB02791257E8B860049923F /* Main.storyboard */,
 				8F55CA8B257E376E00EBDA3E /* Settings.storyboard */,
+				8F53639025D42B2100825568 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -397,6 +395,7 @@
 				8F3D59A725A4C39600DFEAD9 /* DemoPresenting.swift */,
 				8F2A2C3B25B5E9BA008A6D91 /* DemoConfigurability.swift */,
 				8FC1C0FC25A4671F00BF05DD /* DemoDetailViewController.swift */,
+				8F57B72B25D2A50000570A2F /* OnboardingViewController.swift */,
 			);
 			path = MainFlow;
 			sourceTree = "<group>";
@@ -406,8 +405,6 @@
 			children = (
 				8F770261258B97D600C3783D /* PropertiesHeaderView.swift */,
 				8FFDF667259A1357001F70EA /* PropertyEditCell.swift */,
-				8F6C7BE4258CF5060024795E /* StepperCell.swift */,
-				8F6C7BE1258CF4E60024795E /* SwitchCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -489,12 +486,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F4AEFBC259C6AEA0064A37A /* TownsSwiftUI.storyboard in Resources */,
-				8F2F18BD25593CF900CC128C /* LaunchScreen.storyboard in Resources */,
 				8FA7BB28257F9A47002170D6 /* Localizable.strings in Resources */,
 				8FB02792257E8B860049923F /* Main.storyboard in Resources */,
 				8F2F18BA25593CF900CC128C /* Assets.xcassets in Resources */,
 				8F2F18B825593CF800CC128C /* Towns.storyboard in Resources */,
 				8F55CA8C257E376E00EBDA3E /* Settings.storyboard in Resources */,
+				8F53639125D42B2100825568 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,14 +579,13 @@
 				8F76A59F25A3242300EE723C /* TownsMapView.swift in Sources */,
 				8F2F18D6255944CD00CC128C /* MapController.swift in Sources */,
 				8F535D382588B17300B76FC1 /* DemosData.swift in Sources */,
+				8F57B72C25D2A50100570A2F /* OnboardingViewController.swift in Sources */,
 				8F6A43A525B5E26E00E50034 /* TownsDemoOptions.swift in Sources */,
 				8F4AEFB9259C68E50064A37A /* TownsView.swift in Sources */,
 				8F2A2C3F25B5EC2A008A6D91 /* TownsHostingController.swift in Sources */,
 				8FFDF668259A1357001F70EA /* PropertyEditCell.swift in Sources */,
 				8FD1E74225ADCEAF003A6156 /* AppSettingsManager.swift in Sources */,
-				8F6C7BE5258CF5060024795E /* StepperCell.swift in Sources */,
 				8F2F18CE2559425D00CC128C /* DetailViewController.swift in Sources */,
-				8F6C7BE2258CF4E60024795E /* SwitchCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,14 +598,6 @@
 				8F2F18B725593CF800CC128C /* Base */,
 			);
 			name = Towns.storyboard;
-			sourceTree = "<group>";
-		};
-		8F2F18BB25593CF900CC128C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8F2F18BC25593CF900CC128C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 		8FA7BB26257F9A47002170D6 /* Localizable.strings */ = {

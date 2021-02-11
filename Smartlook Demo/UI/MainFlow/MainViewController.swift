@@ -38,6 +38,12 @@ class MainViewController: UIViewController, DemoPresenting {
             self.collectionView.reloadData()
         }
 
+        let settingsNotificationName = SettingsData.smartlookSettingsUpdatedNotification
+        _ = NotificationCenter.default.addObserver(forName: settingsNotificationName, object: nil, queue: nil) { _ in
+            // Updates recording state in header
+            self.collectionView.reloadData()
+        }
+
         configureView()
     }
 
@@ -168,7 +174,7 @@ extension MainViewController: UICollectionViewDataSource {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "FlowDemoHeader",
                                                                          for: indexPath) as? FlowDemoHeaderView
         headerView?.delegate = self
-        headerView?.setupContent(recording: Smartlook.isRecording(), consent: hasConsent)
+        headerView?.setupContent(recording: Smartlook.isRecording(), consent: hasConsent, key: SettingsData.isApiKeyValid)
 
         return headerView!
     }
@@ -216,15 +222,23 @@ extension MainViewController: FlowDemoHeaderViewDelegate {
     // MARK: - FlowDemoHeaderViewDelegate methods
 
     func recordingButtonPressed() {
+        // No API Key is defined, we will show the settings
+        guard SettingsData.isApiKeyValid else {
+            performSegue(withIdentifier: "ShowSettings", sender: self)
+            return
+        }
+
+        // Consent issue, we will ask for a review of consent
         guard hasConsent else {
             reviewConsents()
             return
         }
 
-        // Consent allows start recording
+        // Consent and API key allows start recording
         if Smartlook.isRecording() {
             Smartlook.stopRecording()
-        } else {
+
+        } else if SettingsData.isApiKeyValid {
             Smartlook.startRecording()
         }
 

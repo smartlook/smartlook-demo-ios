@@ -18,7 +18,12 @@ import WebKit
 struct SettingsData {
 
     /// Smartlook Api Key
-    static var smartlookApiKey = ""
+    static var smartlookApiKey: String?
+
+    /// All non empty keys are valid
+    static var isApiKeyValid: Bool {
+        !(smartlookApiKey?.isEmpty ?? true)
+    }
 
     /// Settings for rendering framerate. In this demo application is preserved between
     /// application starts. The next time you run it, the configuration from Smartlook portal
@@ -45,20 +50,6 @@ struct SettingsData {
             set {
                 let renderingMode = Smartlook.currentRenderingMode()
                 Smartlook.setRenderingMode(to: renderingMode, option: newValue)
-            }
-        }
-
-        /// Recorded video frame rate (allowed values between 2 and 10).
-        static var framerate: Int = 2 {
-            didSet {
-                SettingsData.updateConfiguration()
-            }
-        }
-
-        /// Determines if Smartlook adapts its recording framerate to the frequency of UI changes.
-        static var useAdaptiveFramerate: Bool = true {
-            didSet {
-                SettingsData.updateConfiguration()
             }
         }
 
@@ -231,15 +222,17 @@ struct SettingsData {
     // MARK: - Smartlook session
 
     /// Builds Smartlook configuration with actual parameters.
-    static func smartlookConfig() -> Smartlook.SetupConfiguration {
+    static func smartlookConfig() -> Smartlook.SetupConfiguration? {
+        guard let apiKey = Self.smartlookApiKey else {
+            return nil
+        }
+
         let renderingMode = Smartlook.currentRenderingMode()
         let renderingModeOption = Smartlook.currentRenderingModeOption()
 
-        let smartlookConfig = Smartlook.SetupConfiguration(key: Self.smartlookApiKey)
+        let smartlookConfig = Smartlook.SetupConfiguration(key: apiKey)
         smartlookConfig.renderingMode = renderingMode
         smartlookConfig.renderingModeOption = renderingModeOption
-        smartlookConfig.framerate = Self.Rendering.framerate
-        smartlookConfig.enableAdaptiveFramerate = Self.Rendering.useAdaptiveFramerate
         smartlookConfig.eventTrackingModes = Smartlook.currentEventTrackingModes() as NSArray
 
         return smartlookConfig
@@ -247,7 +240,10 @@ struct SettingsData {
 
     /// Updates Smartlook configuration with actual parameters.
     static func updateConfiguration() {
-        let smartlookConfig = Self.smartlookConfig()
+        guard let smartlookConfig = Self.smartlookConfig() else {
+            return
+        }
+
         update(configuration: smartlookConfig)
     }
 
@@ -263,8 +259,26 @@ struct SettingsData {
         // We will set up a new configuration and restore the recording
         Smartlook.setup(configuration: configuration)
 
-        if isRecording {
+        if isRecording, isApiKeyValid {
             Smartlook.startRecording()
         }
     }
+}
+
+extension SettingsData {
+
+    private static var apiKeyUpdatedName = "com.smartlook.SmartlookDemo.notification.apiKeyUpdated"
+    private static var settingsUpdatedName = "com.smartlook.SmartlookDemo.notification.settingsUpdated"
+
+    /**
+     This notification is sent whenever application was configured
+     with new SDK Key, by opening the configuration URL.
+     */
+    public static let smartlookApiKeyUpdatedNotification = Notification.Name(rawValue: apiKeyUpdatedName)
+
+    /**
+     This notification is sent in some situations where some parts
+     of the current configuration have been changed.
+     */
+    public static let smartlookSettingsUpdatedNotification = Notification.Name(rawValue: settingsUpdatedName)
 }

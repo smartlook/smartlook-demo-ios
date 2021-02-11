@@ -42,6 +42,14 @@
 "rendering-mode" = "Rendering mode";
 "rendering-option" = "Rendering option";
 
+/* Value edit screen titles */
+"userIdentification" = "User identification";
+"sdkKey" = "SDK Key";
+
+/* Value edit screen */
+"userIdentificationFooter" = "Identifiers can be found in the Dashboard and are useful for finding specific user’s recordings.";
+"sdkKeyFooter" = "You can find the SDK key in Smartlook: \"Settings organization / Project / your project what you need\"";
+
 /* Properties screen titles */
 "session-properties" = "Session properties";
 "global-properties" = "Global properties";
@@ -63,6 +71,7 @@
 "sdk-recording" = "SDK recording";
 "sdk-suspended" = "SDK suspended";
 "consent-issue" = "Consent issue, SDK disabled!";
+"apiKey-issue" = "SDK Key issue, SDK disabled!";
 
 /* Demo detail screen */
 "demo-notes" = "Demo notes";

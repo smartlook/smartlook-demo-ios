@@ -15,17 +15,11 @@ class RenderingViewController: UITableViewController {
     @IBOutlet private var modeCell: UITableViewCell!
     @IBOutlet private var optionCell: UITableViewCell!
 
-    @IBOutlet private var adaptiveFramerateCell: SwitchCell!
-    @IBOutlet private var framerateCell: StepperCell!
-
 
     // MARK: - Lifecycle
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-        adaptiveFramerateCell.delegate = self
-        framerateCell.delegate = self
 
         updateTable()
     }
@@ -43,13 +37,6 @@ class RenderingViewController: UITableViewController {
         if let renderingModeOption = SettingsData.Rendering.currentModeOption?.rawValue {
             optionCell.detailTextLabel?.text = renderingModeOption.localized
         }
-
-        // Framerate section
-        let useAdaptiveFramerate = SettingsData.Rendering.useAdaptiveFramerate
-        adaptiveFramerateCell.setupContent(SwitchCell.Content(enabled: useAdaptiveFramerate))
-
-        let framerateValue = SettingsData.Rendering.framerate
-        framerateCell.setupContent(StepperCell.Content(value: framerateValue))
     }
 
 
@@ -82,7 +69,10 @@ class RenderingViewController: UITableViewController {
     // MARK: - UI Actions
 
     private func resetCurrentSession() {
-        let smartlookConfig = SettingsData.smartlookConfig()
+        guard let smartlookConfig = SettingsData.smartlookConfig() else {
+            return
+        }
+
         smartlookConfig.resetSession = true
         SettingsData.update(configuration: smartlookConfig)
 
@@ -91,7 +81,10 @@ class RenderingViewController: UITableViewController {
     }
 
     private func resetCurrentSessionAndUser() {
-        let smartlookConfig = SettingsData.smartlookConfig()
+        guard let smartlookConfig = SettingsData.smartlookConfig() else {
+            return
+        }
+
         smartlookConfig.resetSessionAndUser = true
         SettingsData.update(configuration: smartlookConfig)
 
@@ -156,24 +149,5 @@ extension RenderingViewController: SelectionViewControllerDelegate {
         if let renderingModeOption = value as? Smartlook.RenderingModeOption {
             SettingsData.Rendering.currentModeOption = renderingModeOption
         }
-    }
-}
-
-extension RenderingViewController: SwitchCellDelegate {
-
-    // MARK: - SwitchCellDelegate methods
-
-    func switchCellValueChanged(sender: UISwitch) {
-        SettingsData.Rendering.useAdaptiveFramerate = sender.isOn
-    }
-}
-
-extension RenderingViewController: StepperCellDelegate {
-
-    // MARK: - StepperCellDelegate methods
-
-    func stepperCellValueChanged(sender: UIStepper) {
-        SettingsData.Rendering.framerate = Int(sender.value)
-        updateTable()
     }
 }

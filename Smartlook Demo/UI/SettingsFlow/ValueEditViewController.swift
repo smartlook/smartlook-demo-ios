@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ValueEditViewControllerDelegate: AnyObject {
-    func didCloseValueEdit(value: String?)
+    func didCloseValueEdit(id: String?, value: String?)
 }
 
 class ValueEditViewController: UITableViewController {
@@ -21,7 +21,10 @@ class ValueEditViewController: UITableViewController {
 
     // MARK: - Public
 
+    var id: String?
     var value: String?
+    var footerTitle: String?
+
     weak var delegate: ValueEditViewControllerDelegate?
 
 
@@ -46,7 +49,7 @@ class ValueEditViewController: UITableViewController {
         super.viewWillDisappear(animated)
 
         if isMovingFromParent {
-            delegate?.didCloseValueEdit(value: value)
+            delegate?.didCloseValueEdit(id: id, value: value)
         }
     }
 
@@ -62,6 +65,17 @@ class ValueEditViewController: UITableViewController {
 
     @objc func textFieldDidChange(_ textField: UITextField) {
         value = textField.text
+    }
+
+
+    // MARK: - Table view data source
+
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        guard footerTitle != nil else {
+            return super.tableView(tableView, titleForFooterInSection: section)
+        }
+
+        return footerTitle
     }
 
 
@@ -81,7 +95,7 @@ extension ValueEditViewController: UITextFieldDelegate {
         valueTextField.resignFirstResponder()
 
         // Pops back to previous view controller
-        delegate?.didCloseValueEdit(value: value)
+        delegate?.didCloseValueEdit(id: id, value: value)
         navigationController?.popViewController(animated: true)
 
         return true
