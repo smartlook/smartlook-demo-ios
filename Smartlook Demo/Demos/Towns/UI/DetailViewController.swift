@@ -61,6 +61,7 @@ class DetailViewController: UIViewController {
         // Update the user interface for the detail item.
         if town == nil {
             town = TownsData.all.first
+            isMapSensitive = defaultMapSensitivity()
         }
         navigationItem.title = town?.name
 
@@ -79,5 +80,15 @@ class DetailViewController: UIViewController {
             destination?.town = town
             destination?.view.slSensitive = isMapSensitive
         }
+    }
+
+
+    // MARK: - Private methods
+
+    private func defaultMapSensitivity() -> Bool {
+        let navigationController = splitViewController?.primaryViewController as? UINavigationController
+        let listViewController = navigationController?.viewControllers.last as? ListViewController
+
+        return listViewController?.isMapSensitive ?? false
     }
 }

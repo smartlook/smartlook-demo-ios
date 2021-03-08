@@ -39,7 +39,7 @@ class SplitViewController: UISplitViewController, DemoConfigurability {
         let trackSelection = options.filter { $0.id == "track-town-selection" }.first?.enabled
         let isMapSensitive = options.filter { $0.id == "map-sensitivity" }.first?.enabled
         listController.trackSelection = trackSelection ?? true
-        detailViewController.isMapSensitive = isMapSensitive ?? false
+        listController.isMapSensitive = isMapSensitive ?? false
 
         // Add the display mode button to the navigation bar
         detailViewController.navigationItem.leftBarButtonItem = displayModeButtonItem
@@ -65,5 +65,14 @@ extension SplitViewController: UISplitViewControllerDelegate {
 
         // Once we have something to show in the detail
         return detailViewController.town == nil
+    }
+}
+
+extension UISplitViewController {
+
+    // MARK: - Primary controller
+
+    var primaryViewController: UIViewController? {
+        viewControllers.first
     }
 }

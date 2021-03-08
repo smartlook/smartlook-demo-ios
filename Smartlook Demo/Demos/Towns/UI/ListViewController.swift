@@ -16,6 +16,7 @@ class ListViewController: UITableViewController {
 
     // MARK: - Public
 
+    var isMapSensitive = false
     var trackSelection = true
 
 
@@ -49,6 +50,7 @@ class ListViewController: UITableViewController {
             let controller = navigationController?.topViewController as? DetailViewController
             controller?.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
             controller?.navigationItem.leftItemsSupplementBackButton = true
+            controller?.isMapSensitive = isMapSensitive
 
             let town = filteredData()[indexPath?.item ?? 0]
             controller?.town = town
