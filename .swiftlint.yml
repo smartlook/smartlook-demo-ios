@@ -1,0 +1,14 @@
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+- SourcePackages
+- Swift Packages
+
+disabled_rules: # rule identifiers to exclude from running
+- vertical_whitespace
+
+identifier_name:
+    min_length: 2
+
+type_body_length: 250
+function_body_length: 50
+
+line_length: 150

@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SmartlookConsentSDK",
+        "repositoryURL": "https://github.com/smartlook/ios-consent-sdk",
+        "state": {
+          "branch": null,
+          "revision": "268dff63859f4e91de71aadaa153af44cf455824",
+          "version": "1.6.0"
+        }
+      },
+      {
+        "package": "Smartlook",
+        "repositoryURL": "https://github.com/smartlook/SmartlookSwiftPackage",
+        "state": {
+          "branch": null,
+          "revision": "992f96e3da7284bf054c5275dafea1da50f7a085",
+          "version": "1.7.5"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
