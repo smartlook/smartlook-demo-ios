@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F0293F125C1B06100998102 /* Smartlook in Frameworks */ = {isa = PBXBuildFile; productRef = 8F0293F025C1B06100998102 /* Smartlook */; };
+		334BF1E92638563D0079EA01 /* Smartlook.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 334BF1E82638563D0079EA01 /* Smartlook.xcframework */; };
 		8F2076B725876509009D64BA /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2076B625876509009D64BA /* UIView+CornerRadius.swift */; };
 		8F2076BB258771B4009D64BA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2076BA258771B4009D64BA /* MainViewController.swift */; };
 		8F2076BF2587A299009D64BA /* FlowDemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2076BE2587A299009D64BA /* FlowDemoCell.swift */; };
@@ -63,20 +63,8 @@
 		8FFDF668259A1357001F70EA /* PropertyEditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFDF667259A1357001F70EA /* PropertyEditCell.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		8FA4782925B871D40060A186 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		334BF1E82638563D0079EA01 /* Smartlook.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Smartlook.xcframework; path = "/Users/jezovec/Library/Developer/Xcode/DerivedData/Smartlook_Demo-cttwjvxkdnexotedmhsuxgwawwrf/SourcePackages/artifacts/Smartlook/Smartlook.xcframework"; sourceTree = "<absolute>"; };
 		8F2076B625876509009D64BA /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
 		8F2076BA258771B4009D64BA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8F2076BE2587A299009D64BA /* FlowDemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowDemoCell.swift; sourceTree = "<group>"; };
@@ -140,7 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F6A43A025B5D6FC00E50034 /* SmartlookConsentSDK in Frameworks */,
-				8F0293F125C1B06100998102 /* Smartlook in Frameworks */,
+				334BF1E92638563D0079EA01 /* Smartlook.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +400,7 @@
 		8FDA84E025B822110002ABCE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				334BF1E82638563D0079EA01 /* Smartlook.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -428,7 +417,6 @@
 				8F2F18AB25593CF800CC128C /* Resources */,
 				8F81C684255D6482000976C0 /* SwiftLint */,
 				8FF3407D25C80CB400907416 /* SwiftFormatter */,
-				8FA4782925B871D40060A186 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -437,7 +425,6 @@
 			name = "Smartlook Demo";
 			packageProductDependencies = (
 				8F6A439F25B5D6FC00E50034 /* SmartlookConsentSDK */,
-				8F0293F025C1B06100998102 /* Smartlook */,
 			);
 			productName = "Smartlook Hiring";
 			productReference = 8F2F18AD25593CF800CC128C /* Smartlook Demo.app */;
@@ -733,7 +720,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 57MHDLMMHS;
+				DEVELOPMENT_TEAM = 5PM7GT7WGW;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Smartlook Demo/Application/Info.plist";
@@ -755,7 +742,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 57MHDLMMHS;
+				DEVELOPMENT_TEAM = 5PM7GT7WGW;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Smartlook Demo/Application/Info.plist";
@@ -814,11 +801,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8F0293F025C1B06100998102 /* Smartlook */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8F0293EF25C1B06100998102 /* XCRemoteSwiftPackageReference "SmartlookSwiftPackage" */;
-			productName = Smartlook;
-		};
 		8F6A439F25B5D6FC00E50034 /* SmartlookConsentSDK */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8F6A439E25B5D6FC00E50034 /* XCRemoteSwiftPackageReference "ios-consent-sdk" */;
