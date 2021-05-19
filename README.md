@@ -17,7 +17,6 @@ It serves as a tool for developers and teams that would like to deploy Smartlook
 
 
 [<img src="readme-media/SmartlookDemo-Main-iPhone.png" width=292>](readme-media/SmartlookDemo-Main-iPhone.png)
-
 [<img src="readme-media/SmartlookDemo-Settings-iPhone.png" width=292>](readme-media/SmartlookDemo-Settings-iPhone.png)
 
 
