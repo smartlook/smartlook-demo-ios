@@ -8,7 +8,6 @@ It serves as a tool for developers and teams that would like to deploy Smartlook
 - For switching between different recording modes.
 - For generating sample recordings.
 
-
 **Who is it for?**
 - Application developers (to study usage and as a starting point for further testing).
 - For anyone who is thinking about deploying the technology and would like to try it on their device.
@@ -16,13 +15,15 @@ It serves as a tool for developers and teams that would like to deploy Smartlook
 **What else does it do?**
 - Demonstrates the use of the [Smartlook Consent SDK](https://github.com/smartlook/ios-consent-sdk) in a real application.
 
-![Main screen (iPhone)](https://github.com/smartlook/smartlook-demo-ios/raw/main/readme-media/SmartlookDemo-Main-iPhone.png) 
-![Settings (iPhone)](https://github.com/smartlook/smartlook-demo-ios/raw/main/readme-media/SmartlookDemo-Settings-iPhone.png)
+
+[<img src="readme-media/SmartlookDemo-Main-iPhone.png" width=292>](readme-media/SmartlookDemo-Main-iPhone.png)
+[<img src="readme-media/SmartlookDemo-Settings-iPhone.png" width=292>](readme-media/SmartlookDemo-Settings-iPhone.png)
 
 
 ## Minimum requirements
 
 iOS 14.0, Xcode 12.4, compatible iPhone, iPad or Simulator
+
 
 ## Prerequisites
 
@@ -39,7 +40,8 @@ Update the `smartlookApiKey` constant at the beginning of the `AppDelegate.swift
 ### Without an explicit SDK key definition (default)
 If you do not specify `smartlookApiKey` constant, the application will prompt for it during the first launch.
 
-![Insert SDK Key (iPhone)](https://github.com/smartlook/smartlook-demo-ios/raw/main/readme-media/SmartlookDemo-SDKKey-iPhone.png)
+[<img src="readme-media/SmartlookDemo-SDKKey-iPhone.png" width=292>](readme-media/SmartlookDemo-SDKKey-iPhone.png)
+
 
 ## License
 
